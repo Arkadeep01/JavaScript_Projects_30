@@ -1,0 +1,174 @@
+/* Glassmorphism Background */
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #16213e, #0f3460, #53354a);
+  background-size: 400% 400%;
+  animation: neonBackground 25s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+
+@keyframes neonBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Neon Button Styles */
+.neon-green {
+  background-color: #00ffab;
+  color: #000;
+  border: none;
+}
+.neon-green:hover {
+  box-shadow: 0 0 10px #00ffab, 0 0 20px #00ffab;
+}
+
+.neon-yellow {
+  background-color: #fffd54;
+  color: #000;
+  border: none;
+}
+.neon-yellow:hover {
+  box-shadow: 0 0 10px #fffd54, 0 0 20px #fffd54;
+}
+
+.neon-red {
+  background-color: #ff4f4f;
+  color: #fff;
+  border: none;
+}
+.neon-red:hover {
+  box-shadow: 0 0 10px #ff4f4f, 0 0 20px #ff4f4f;
+}
+
+.neon-blue {
+  background-color: #4f8bff;
+  color: #fff;
+  border: none;
+}
+.neon-blue:hover {
+  box-shadow: 0 0 10px #4f8bff, 0 0 20px #4f8bff;
+}
+
+.neon-cyan {
+  background-color: #00d4ff;
+  color: #000;
+  border: none;
+}
+.neon-cyan:hover {
+  box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+}
+
+/* Task List Styling */
+#task_list {
+  list-style: none;
+  padding-left: 0;
+}
+#task_list li {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#task_list li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Form Label Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #00ffe0, #7f00ff);
+  -webkit-background-clip: text; 
+  -moz-background-clip: text;    
+  background-clip: text;         
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;   
+  color: transparent;            
+}
+
+/* Toggle Button */
+#toggle-theme {
+  transition: all 0.3s ease;
+}
+#toggle-theme:hover {
+  background-color: #ffffff20;
+  transform: scale(1.05);
+}
+
+/* Input Fields */
+select.form-select {
+  background-color: #1c1c2e;
+  color: #fff;
+  border: 2px solid #00f7ff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 8px #00f7ff50;
+  transition: all 0.3s ease;
+}
+
+/* On hover/focus */
+select.form-select:hover,
+select.form-select:focus {
+  outline: none;
+  border-color: #0ff;
+  box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff88;
+  background-color: #111122;
+  color: #fff;
+}
+
+/* Style option items */
+select.form-select option {
+  background-color: #1b1b2f;
+  color: #00ffe1;
+  padding: 10px;
+}
+
+/* Active or selected option */
+select.form-select option:checked {
+  background-color: #00ffe1;
+  color: #000;
+}
+/* Notes */
+#task_notes {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+/* Transitions */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
