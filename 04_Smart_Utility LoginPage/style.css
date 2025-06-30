@@ -1,0 +1,318 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+/* Form Containers */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+/* Sign In */
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+/* Sign Up */
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Active Panel */
+.container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Form Styling */
+form {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form input {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    background-color: #eee;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Password visibility box */
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 0 12px;
+    margin: 10px 0;
+}
+
+.input-box input {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+}
+
+.input-box img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #7429cc;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5e17eb;
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border: 2px solid #8622f8;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button.ghost:hover {
+    background-color: #fff; 
+    color: #7429cc; 
+}
+
+/* Strength Message */
+#strengthMessage {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Overlay Container */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+/* Overlay */
+.overlay {
+    background: linear-gradient(to right, #7429cc, #5e17eb);
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Active Overlay */
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+/* Overlay Panels */
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.password-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.password-actions button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #7429cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.password-actions p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Position eye icon inside password input */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    max-width: 310px;       
+    padding: 12px 45px 12px 12px;
+    background: #eee;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+.input-wrapper img {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+.input-wrapper img:hover {
+    opacity: 1;
+}
+
+#checkStrength, #generateBtn {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#strengthMessage {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        min-height: auto;
+    }
+    form {
+        padding: 20px;
+    }
+    .form-container,
+    .overlay-container,
+    .overlay-panel {
+        width: 100%;
+        position: relative;
+    }
+    .overlay {
+        display: none;
+    }
+}
