@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Media Center</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/00910e6fda.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#music">🎵 Music Player</a></li>
+            <li><a href="#quote-section">💬 Quote Generator</a></li>
+            <li><a href="#tts">🗣️ Text-to-Speech</a></li>
+        </ul>
+    </nav>
+
+    <header class="header-color text-white text-center py-3">
+        <h1>Interactive Media Center</h1>
+        <p>Explore Music, Quotes, and Text-to-Speech</p>
+    </header>
+
+    <main class="container text-center py-4">
+        <!-- Music Player -->
+        <section id="music">
+            <div class="music-player">
+                <nav class="d-flex align-items-center justify-content-between px-4 mb-4" style="gap: 20px;">
+                    <div class="circle">
+                        <i class="fa-solid fa-angles-left"></i>
+                    </div>
+                    <h2 class="player-title m-0">🎵 Music Player</h2>
+                    <div class="circle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+
+                <img src="images/despacito.jpeg" alt="Album Cover" class="album-cover" style="max-width: 200px;"
+                    id="cover" />
+
+                <h2 id="title">Despacito</h2>
+                <p id="artist">Luis Fonsi</p>
+
+                <audio id="music-player">
+                    <source src="audio/Luis Fonsi - Despacito ft. Daddy Yankee.mp3" type="audio/mpeg"
+                        id="audio-source" />
+                    Your browser does not support the audio element.
+                </audio>
+
+                <input type="range" value="0" id="progress-bar" />
+
+                <div class="controls d-flex justify-content-center gap-3">
+                    <div class="circle" onclick="prevSong()"><i class="fa-solid fa-backward"></i></div>
+                    <div class="circle" onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                    <div class="circle" onclick="nextSong()"><i class="fa-solid fa-forward"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Generator -->
+        <section id="quote-section">
+            <div class="quote-box">
+                <h2 class="quote-title">Quote of the Day</h2>
+                <blockquote class="quote-text" id="quote-text">Quote...</blockquote>
+                <span class="author" id="quote-author">- Author</span>
+                <div>
+                    <button class="btn btn-primary" id="new-quote" onclick="getquote(api_url)">New Quote</button>
+                    <button class="btn btn-secondary" id="tweet-quote" onclick="tweet()">
+                        <img src="images/twitter.png" alt="Twitter-icon">Tweet
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Text-to-Speech -->
+        <section id="tts" class="text-center mt-5">
+            <h2>🗣️ Speak Something</h2>
+            <textarea id="tts-input" rows="3" class="form-control w-75 mx-auto my-3"
+                placeholder="Type something..."></textarea>
+            <button class="btn btn-success" onclick="speakInput()">Speak</button>
+        </section>
+    </main>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2025 Interactive Media Center</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
