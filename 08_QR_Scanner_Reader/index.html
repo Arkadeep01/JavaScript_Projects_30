@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator & Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- QR Code Generator -->
+        <section class="QR-Generate" aria-labelledby="qr-gen">
+            <p id="qr-gen">Enter your text or URL</p>
+            <input type="text" placeholder="Text or URL" id="QRtext" required>
+
+            <div class="imgBox" id="imgBox" aria-live="polite">
+                <img src="" id="QRimage" alt="Generated QR Code">
+            </div>
+
+            <button type="button" onclick="generateQR()">Generate QR Code</button>
+        </section>
+
+        <!-- QR Code Scanner -->
+        <section class="QR-Scanner" aria-labelledby="qr-scan">
+            <h2 id="qr-scan">Scan QR code from image</h2>
+            <p>Drag & Drop a QR code image here or click to upload</p>
+
+            <div class="dragQR" id="drop-area">
+                <input type="file" id="fileElem" accept="image/*" hidden onchange="handlefiles(this.files)">
+                <label for="fileElem" id="fileLabel">Drag image here or click to Select</label>
+                <div class="resultQR" id="preview"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
