@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Application Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/00910e6fda.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="container my-5 p-5 shadow-lg bg-white rounded">
+            <!-- ... keep head and other content same ... -->
+            <form id="volunteerForm">
+                <h2 class="text-center mb-4">Volunteer Application Form</h2>
+
+                <!-- Personal Info -->
+                <section aria-labelledby="personal-info">
+                    <h3 id="personal-info" class="h5 mt-4">Personal Information</h3>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" onkeyup="validateName()" required>
+                        <small id="name-error" class="form-text text-danger"></small>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" onkeyup="validateEmail()"
+                            required>
+                        <small id="email-error" class="form-text text-danger"></small>
+                    </div>
+                </section>
+
+                <!-- Address -->
+                <section aria-labelledby="address-info">
+                    <h3 id="address-info" class="h5 mt-4">Address Information</h3>
+
+                    <input type="text" class="form-control mb-2" id="street-address" placeholder="Street Address"
+                        name="Address" onkeyup="validateAddress()" required>
+                    <small id="address-error" class="form-text text-danger"></small>
+
+                    <input type="text" class="form-control mb-2" id="street-line2" placeholder="Street Address line 2"
+                        name="Address2">
+
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control mb-2" id="city" placeholder="City" name="City"
+                                onkeyup="validateCity()" required>
+                            <small id="city-error" class="form-text text-danger"></small>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control mb-2" id="region" placeholder="Region" name="region"
+                                onkeyup="validateRegion()" required>
+                            <small id="region-error" class="form-text text-danger"></small>
+                        </div>
+                    </div>
+
+                    <input type="int" class="form-control" id="postal-code" placeholder="Postal/Zip Code" name="code"
+                        onkeyup="validatePostal()" required>
+                    <small id="postal-error" class="form-text text-danger"></small>
+                </section>
+
+                <!-- Emergency Contact -->
+                <section aria-labelledby="emergency-contact">
+                    <h3 id="emergency-contact" class="h5 mt-4">Emergency Contact Information</h3>
+                    <div class="form-group">
+                        <label for="emergency-name">Emergency Contact Name</label>
+                        <input type="text" class="form-control" id="emergency-name" name="emergency-name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relationship">Relationship</label>
+                        <select class="form-control" id="relationship" name="relationship">
+                            <option value="">Select relationship</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="Friend">Friend</option>
+                            <option value="Spouse">Spouse</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergency-phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="emergency-phone" name="emergency-phone"
+                            placeholder="XXX XXX XXXX">
+                    </div>
+                </section>
+
+                <!-- Contact Numbers -->
+                <section aria-labelledby="contact-info">
+                    <h3 id="contact-info" class="h5 mt-4">Contact Numbers</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone-number">Phone No</label>
+                            <input type="tel" class="form-control" id="phone-number" name="phone"
+                                placeholder="XXX XXX XXXX" onkeyup="validatePhone()" required>
+                            <small id="phoneNo-error" class="form-text text-danger"></small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="alt-phone-number">Alternative Phone No</label>
+                            <input type="tel" class="form-control" id="alt-phone-number" name="alt-phone"
+                                placeholder="XXX XXX XXXX">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Locations -->
+                <section aria-labelledby="locations-info">
+                    <h3 id="locations-info" class="h5 mt-4">Location Preferences</h3>
+                    <div class="form-group">
+                        <label for="locations">Preferred Locations</label>
+                        <input type="text" class="form-control" id="locations" name="locations"
+                            placeholder="Enter the locations" onkeyup="validateLocation()" required>
+                        <small id="location-error" class="form-text text-danger"></small>
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section aria-labelledby="experience-info">
+                    <h3 id="experience-info" class="h5 mt-4">Experience</h3>
+                    <div class="form-group">
+                        <label for="experience">Describe your experience</label>
+                        <textarea class="form-control" id="experience" rows="3" name="experience"
+                            onkeyup="validateMessage()" required></textarea>
+                        <small id="message-error" class="form-text text-danger"></small>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section aria-labelledby="skills-info">
+                    <h3 id="skills-info" class="h5 mt-4">Skills You Can Contribute</h3>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="fundraising" name="skills[]"
+                            value="Fundraising">
+                        <label class="form-check-label" for="fundraising">Fundraising</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="marketing" name="skills[]"
+                            value="Marketing">
+                        <label class="form-check-label" for="marketing">Marketing</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="public-relations" name="skills[]"
+                            value="Public Relations">
+                        <label class="form-check-label" for="public-relations">Public Relations</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="operations" name="skills[]"
+                            value="Operations">
+                        <label class="form-check-label" for="operations">Operations</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="other" name="skills[]" value="Other">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+                </section>
+
+                <!-- Submit -->
+                <footer class="mt-4">
+                    <button type="submit" class="btn btn-primary btn-block">Apply Now</button>
+                    <small id="submit-error" class="form-text text-danger text-center mt-2"></small>
+                </footer>
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="bg-light text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2025 Volunteer Network. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

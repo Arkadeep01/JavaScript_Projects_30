@@ -1,0 +1,84 @@
+/* General body and form container styles */
+body {
+    background: linear-gradient(to right, #f8f9fa, #cce5ff, #99ccfe, #66b2ff, #377bbf, #2c5282);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3a4c5d;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Section Styling */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.22);
+}
+
+/* Section Headings */
+form h3 {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #0a428f;
+}
+
+/* Default: Error Style */
+small.form-text.text-danger {
+    color: red;
+    font-size: 0.875rem;
+    display: block;
+}
+
+/* Success Style */
+small.success {
+    color: green;
+    font-size: 0.875rem;
+    display: block;
+}
+
+/* Error message styles */
+span[id$="-error"] {
+    display: none;
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+/* Checkbox styling */
+.form-check {
+    margin-bottom: 10px;
+}
+
+/* Submit button */
+button[type="submit"] {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer.bg-light {
+    font-size: 0.9rem;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    form {
+        padding: 20px;
+    }
+}
