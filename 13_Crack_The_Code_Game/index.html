@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Crack The Code Game</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/788fc8cac3.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="font-family: 'Yeon Sung', cursive;">
+    <header class="bg-dark text-white text-center py-3">
+        <h1>
+            <i class="fas fa-user-secret"></i> Crack: The Code
+        </h1>
+    </header>
+
+    <main class="flex-grow-1">
+        <!-- Pop Up Section -->
+        <section class="modal fade" id="popup" tabindex="1" role="dialog" aria-labelledby="popupLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-white font-weight-bold" id="popupLabel">
+                            Pop Up
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 id="result" class="text-center"></h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary mt-2" data-dismiss="modal" onclick="resetGame();">
+                            <i class="fas fa-sync-alt"></i>OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Body -->
+        <section class="container my-4">
+            <h2 class="text-center mb-3">Enter the secret code:</h2>
+            <div class="text-center">
+                <input type="text" id="b1">
+                <input type="text" id="b2">
+                <input type="text" id="b3">
+                <br>
+                <button class="btn btn-dark mt-4" onclick="func();">
+                    <i class="fas fa-key"></i> Check
+                </button>
+            </div>
+        </section>
+
+        <!-- Hints -->
+        <section class="container my-4" id="hints">
+            <div class="row justify-content-center">
+                <div id="hintOne" class="col-md-4 mb-4 d-flex justify-content-center">
+                    <div class="card w-100 text-center">
+                        <div class="card-header">
+                            <h4><i class="fas fa-lightbulb"></i> #Hint 1</h4>
+                        </div>
+                        <div class="card-body">
+                            <p id="h1" class="d-flex justify-content-center gap-2 mb-3"></p>
+                            <h5>One Number is correct and well placed</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hintTwo" class="col-md-4 mb-4 d-flex justify-content-center">
+                    <div class="card w-100 text-center">
+                        <div class="card-header">
+                            <h4><i class="fas fa-lightbulb"></i> #Hint 2</h4>
+                        </div>
+                        <div class="card-body">
+                            <p id="h2" class="d-flex justify-content-center gap-2 mb-3"></p>
+                            <h5>One Number is correct but Wrong Placed</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hintThree" class="col-md-4 mb-4 d-flex justify-content-center">
+                    <div class="card w-100 text-center">
+                        <div class="card-header">
+                            <h4><i class="fas fa-lightbulb"></i> #Hint 3</h4>
+                        </div>
+                        <div class="card-body">
+                            <p id="h3" class="d-flex justify-content-center gap-2 mb-3"></p>
+                            <h5>Two Numbers are correct but Wrong Placed</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hintFour" class="col-md-4 mb-4 d-flex justify-content-center">
+                    <div class="card w-100 text-center">
+                        <div class="card-header">
+                            <h4><i class="fas fa-lightbulb"></i> #Hint 4</h4>
+                        </div>
+                        <div class="card-body">
+                            <p id="h4" class="d-flex justify-content-center gap-2 mb-3"></p>
+                            <h5>Nothing is correct</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hintFive" class="col-md-4 mb-4 d-flex justify-content-center">
+                    <div class="card w-100 text-center">
+                        <div class="card-header">
+                            <h4><i class="fas fa-lightbulb"></i> #Hint 5</h4>
+                        </div>
+                        <div class="card-body">
+                            <p id="h5" class="d-flex justify-content-center gap-2 mb-3"></p>
+                            <h5>One Number is correct but Wrong Placed</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-danger text-center py-3 mt-auto">
+        <p class="mb-0">
+            &copy; 2025 Crack the Code Game | Designed By Vexel
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
