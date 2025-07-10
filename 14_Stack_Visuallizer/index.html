@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stack Visualizer</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/788fc8cac3.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Libertinus+Math&family=Libertinus+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+    <header class="text-center text-white bg-dark py-4">
+        <h1 class="fw-bold">Stack Visualization</h1>
+    </header>
+
+    <main class="flex-fill container bg-white p-4 rounded-4 shadow-sm">
+        <section class="d-flex flex-column align-items-center mb-4">
+            <div class="input-group w-75 mb-3">
+                <input type="number" class="form-control form-control-lg" placeholder="Enter a number" required>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-success btn-lg mx-2 push">Push</button>
+                <button class="btn btn-warning btn-lg text-white mx-2 pop">Pull</button>
+                <button class="btn btn-danger btn-lg mx-2 reset">Reset</button>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="stack-box" id="stack-area">
+                    <!-- Stack elements appear here -->
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h5>Top Element in the stack:</h5>
+                    <button class="btn btn-outline-secondary box" id="top-element"></button>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h5>Last Pushed in the stack:</h5>
+                    <button class="btn btn-outline-primary box" id="last-pushed"></button>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h5>Last Popped in the stack:</h5>
+                    <button class="btn btn-outline-danger box" id="last-popped"></button>
+                </div>
+                <div class="mb-3 d-flex justify-content-between align-items-center">
+                    <h5>Size of the Stack:</h5>
+                    <button class="btn btn-outline-dark box" id="stack-size"></button>
+                </div>
+
+                <div class="message-box mt-4">
+                    <h5 class="text-center mb-2 fw-bold">Message Box</h5>
+                    <input type="text" class="form-control" id="message-box" readonly>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-muted font-weight-bold mt-auto py-3">
+        <h5>&copy; Created by Vexel, 2025</h5>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

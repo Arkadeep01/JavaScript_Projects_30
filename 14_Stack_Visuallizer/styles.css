@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Libertinus+Math&family=Libertinus+Mono&display=swap');
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+main {
+    flex: 1;
+    max-width: 1000px;
+    margin-top: 2rem;
+}
+
+/* Stack Box */
+.stack-box {
+    min-height: 380px;
+    width: 200px;
+    border: 4px solid black;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    margin: 1rem auto;
+}
+
+/* Stack Element */
+.stack-element {
+    height: 80px;
+    width: 170px;
+    background-color: green;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    border: 4px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Info Display Buttons */
+.box {
+    width: 140px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Message Box */
+.message-box {
+    background-color: bisque;
+    border-radius: 10px;
+    padding: 1rem;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-box h5 {
+    margin-bottom: 1.5rem;
+}
+
+.message-box input {
+    font-size: 24px;
+}
+
+/* Stack Element Animations */
+.stack-element.adding {
+    animation: pushAnimation 0.3s infinite linear;
+}
+
+.stack-element.removing {
+    animation: popAnimation 0.3s infinite linear;
+}
+
+@keyframes pushAnimation {
+    0% { background-color: green; }
+    100% { background-color: rgb(17, 92, 255); }
+}
+
+@keyframes popAnimation {
+    0% { background-color: green; }
+    100% { background-color: rgb(255, 15, 59); }
+}
+
+#error {
+    animation: errorFlash 0.4s infinite linear;
+}
+
+@keyframes errorFlash {
+    0% { background-color: bisque; }
+    100% { background-color: rgb(255, 99, 132); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .stack-box {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .stack-element {
+        width: 100%;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
