@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', 'Algerian', 'Cormorant Garamond', 'Georgia', 'Lucida Calligraphy';
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40, #12121c);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    background: #0d0d1a;
+    color: #0ff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.balance h2 {
+    font-size: 1.8rem;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    align-items: center;
+}
+
+.input-group input,
+.input-group select {
+    background: #2c2c3a;
+    color: #fff;
+    flex: 1 1 200px;
+    height: 48px;
+    border: 2px solid #0ff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+}
+
+.input-group .btn {
+    background: #00e0ff;
+    color: #121212;
+    font-weight: bold;
+    height: 48px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: 0 0 10px #00e0ff, 0 0 20px #00e0ff;
+}
+
+.tracker-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.transaction-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+#transaction-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#transaction-list li {
+    background: #1c1c2b;
+    margin-bottom: 12px;
+    padding: 12px 20px;
+    border-left: 5px solid #0ff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+#transaction-list li.income {
+    border-left-color: #00ff88;
+    color: #00ff88;
+}
+
+#transaction-list li.expense {
+    border-left-color: #ff4d4d;
+    color: #ff4d4d;
+}
+
+.chart-container {
+    flex: 0 0 300px;
+    background: #1c1c2b;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px #0ff;
+}
+
+#expenseChart {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #aaa;
+    font-size: 14px;
+}
