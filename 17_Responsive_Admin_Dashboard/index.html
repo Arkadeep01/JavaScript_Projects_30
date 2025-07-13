@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin Dashboard</title>
+
+    <meta name="description" content="AdminX Dashboard: Powerful analytics and insights in one place.">
+    <meta name="keywords" content="admin, dashboard, analytics, business, responsive, Arkadeep">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/788fc8cac3.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font & Symbols Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Trebuchet+MS&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- left side -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="images/vexel_mark.png" alt="">
+                    <h2><span class="danger">VEXEL</span></h2>
+                </div>
+
+                <button id="menu_bar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="close" id="close_Btn">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        grid_view
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-symbols-sharp">
+                        person_outline
+                    </span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Messages</h3>
+                    <span class="msg-count">14</span>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        add
+                    </span>
+                    <h3>Add Product</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        logout
+                    </span>
+                    <h3>logout</h3>
+                </a>
+            </div>
+
+        </aside>
+
+        <!-- Main Area -->
+        <main>
+            <section class="dashboard">
+                <h1>Dashboard</h1>
+                <div class="date">
+                    <input type="date">
+                </div>
+
+                <!-- Insight Block -->
+                <div class="insights">
+                    <!-- Sales block -->
+                    <div class="sales">
+                        <span class="material-symbols-sharp">trending_up</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Total Sales</h3>
+                                <h1><i class="fa-solid fa-indian-rupee-sign"></i>1,50,000</h1>
+                            </div>
+                            <div class="progress">
+                                <div class="outer"
+                                    style="background: conic-gradient(var(--clr-primary) 100%, #e6e6e6 0%);">
+                                    <div class="inner"></div>
+                                </div>
+                                <div class="number">100%</div>
+                            </div>
+                        </div>
+                        <small>Last 24 hours</small>
+                    </div>
+
+                    <!-- Expense block -->
+                    <div class="expenses">
+                        <span class="material-symbols-sharp">local_mall</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Expense</h3>
+                                <h1><i class="fa-solid fa-indian-rupee-sign"></i>45,000</h1>
+                            </div>
+                            <div class="progress">
+                                <div class="outer"
+                                    style="background: conic-gradient(var(--clr-danger) 30%, #e6e6e6 0%);">
+                                    <div class="inner"></div>
+                                </div>
+                                <div class="number">30%</div>
+                            </div>
+                        </div>
+                        <small>Last 24 hours</small>
+                    </div>
+
+                    <!-- Income block -->
+                    <div class="income">
+                        <span class="material-symbols-sharp">stacked_line_chart</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Income</h3>
+                                <h1><i class="fa-solid fa-indian-rupee-sign"></i>1,05,000</h1>
+                            </div>
+                            <div class="progress">
+                                <div class="outer"
+                                    style="background: conic-gradient(var(--clr-success) 70%, #e6e6e6 0%);">
+                                    <div class="inner"></div>
+                                </div>
+                                <div class="number">70%</div>
+                            </div>
+                        </div>
+                        <small>Last 24 hours</small>
+                    </div>
+                </div>
+
+                <!-- Recent Order Display Block -->
+                <div class="recent_orders">
+                    <h1>Recent Orders</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Product Number</th>
+                                <th>Payments</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wireless Mouse</td>
+                                <td>799</td>
+                                <td>Paid</td>
+                                <td class="success">Delivered</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>Bluetooth Speaker</td>
+                                <td>1299</td>
+                                <td>Due</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>USB-C Hub</td>
+                                <td>999</td>
+                                <td>Paid</td>
+                                <td class="success">Shipped</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>Gaming Keyboard</td>
+                                <td>2599</td>
+                                <td>Due</td>
+                                <td class="danger">Cancelled</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>Webcam HD</td>
+                                <td>1899</td>
+                                <td>Paid</td>
+                                <td class="success">Delivered</td>
+                                <td class="primary">Details</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Section -->
+        <div class="right">
+
+            <!-- Top Block -->
+            <div class="top">
+                <div class="profile-block">
+                    <div class="profile-controls">
+                        <div class="theme-toggler">
+                            <span class="material-symbols-sharp active">light_mode</span>
+                            <span class="material-symbols-sharp">dark_mode</span>
+                        </div>
+                    </div>
+
+                    <!-- Add spacing between controls and user profile -->
+                    <div class="profile-user">
+                        <div class="profile-info">
+                            <p><b>Arkadeep</b></p>
+                            <p>Admin</p>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="images/admin.jpeg" alt="Admin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Updates -->
+            <div class="recent_updates">
+                <h2>Recent Updates</h2>
+                <div class="update">
+                    <div class="updates">
+                        <div class="profile-photo small"><img src="images/profile-1.jpg" alt="Damian"></div>
+                        <div class="message">
+                            <p><b>Damian</b> received a <i>Wireless Mouse</i> – Delivered ✅</p>
+                        </div>
+                    </div>
+                    <div class="updates">
+                        <div class="profile-photo small"><img src="images/profile-2.jpg" alt="Dominic"></div>
+                        <div class="message">
+                            <p><b>Dominic</b> has a <i>Bluetooth Speaker</i> payment due ⏳</p>
+                        </div>
+                    </div>
+                    <div class="updates">
+                        <div class="profile-photo small"><img src="images/profile-3.jpg" alt="Jenny"></div>
+                        <div class="message">
+                            <p><b>Jenny</b>'s <i>USB-C Hub</i> has been shipped 📦</p>
+                        </div>
+                    </div>
+                    <div class="updates">
+                        <div class="profile-photo small"><img src="images/profile-4.jpg" alt="Maria"></div>
+                        <div class="message">
+                            <p><b>Maria</b>'s <i>Gaming Keyboard</i> order was cancelled ❌</p>
+                        </div>
+                    </div>
+                    <div class="updates">
+                        <div class="profile-photo small"><img src="images/profile-5.jpg" alt="Anthony"></div>
+                        <div class="message">
+                            <p><b>Anthony</b> received <i>Webcam HD</i> – Delivered ✅</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Analytics -->
+            <!-- Analytics -->
+            <div class="sales-analytics">
+                <h2>Sales Analytics</h2>
+
+                <div class="analytic-card">
+                    <div class="item item-orders">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Online Orders</h3>
+                            <small class="text-muted">Last seen 2 hours ago</small>
+                        </div>
+                        <h5 class="danger">-17%</h5>
+                        <h3>3,849</h3>
+                    </div>
+                </div>
+
+                <div class="analytic-card">
+                    <div class="item item-returns">
+                        <span class="material-symbols-sharp">assignment_return</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Returns Processed</h3>
+                            <small class="text-muted">Updated 30 mins ago</small>
+                        </div>
+                        <h5 class="success">+5%</h5>
+                        <h3>421</h3>
+                    </div>
+                </div>
+
+                <div class="analytic-card">
+                    <div class="item item-revenue">
+                        <span class="material-symbols-sharp">trending_up</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Revenue Generated</h3>
+                            <small class="text-muted">Today</small>
+                        </div>
+                        <h5 class="success">+12%</h5>
+                        <h3>₹1,20,000</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Products Symbol -->
+            <div class="item add_products">
+                <div>
+                    <span class="material-symbols-sharp">add</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <small>
+            AdminX Dashboard &copy; 2025 | Crafted with HTML, CSS, Bootstrap & JavaScript by Arkadeep | v1.0
+        </small>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
