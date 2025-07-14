@@ -1,18 +1,21 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', 'Algerian', 'Cormorant Garamond', 'Georgia', 'Lucida Calligraphy', 'Poppins';
     box-sizing: border-box;
+    font-family: 'Cormorant Garamond', 'Times New Roman', 'Georgia', 'Poppins', serif;
 }
 
+/* Base Page Styling */
 body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, #310a03, #ff416c);
     color: #fff;
     min-height: 100vh;
+    padding-bottom: 2rem;
 }
 
+/* Header Styling */
 header {
     background: #000000;
     color: #0ff;
@@ -21,16 +24,59 @@ header {
     box-shadow: 0 0 10px #ff0004, 0 0 20px #ff0000 inset;
 }
 
-h1 {
+header h1 {
     font-size: 2.2rem;
     letter-spacing: 1px;
     text-shadow: 0 0 10px #ff0000;
 }
 
+/* Main Content */
 main {
     flex: 1;
+    padding: 1rem;
 }
 
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    border: 1px solid #555;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Labels */
+label {
+    font-weight: 400;
+    color: #f9f9f9;
+}
+
+/* Buttons */
+.btn-outline-light,
+.btn-outline-info,
+.btn-outline-success,
+.btn-outline-warning,
+.btn-outline-primary,
+.btn-outline-secondary {
+    border-width: 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Save Button Alignment */
+.save-btn {
+    min-width: 130px;
+}
+
+/* Skills / Optional Sections Transitions */
 .skills-section,
 .certification-section,
 .Projects-section,
@@ -38,6 +84,52 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
+/* List Groups (e.g., Saved Languages) */
+.list-group-item {
+    background-color: #f8f9fa;
+    color: #000;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+/* Modals */
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-body button {
+    font-weight: 600;
+}
+
+/* Theme Toggler */
+.theme-toggler {
+    background: #000;
+    border-radius: 25px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1260px;
+    box-shadow: 0 0 10px #00ffee;
+    cursor: pointer;
+}
+
+.theme-toggler .material-symbols-sharp {
+    font-size: 20px;
+    color: #0ff;
+}
+
+.theme-toggler .active {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 8px #00ffee;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
