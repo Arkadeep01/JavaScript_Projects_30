@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', 'Algerian', 'Cormorant Garamond', 'Georgia', 'Lucida Calligraphy', 'Poppins';
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #310a03, #ff416c);
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    background: #000000;
+    color: #0ff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 0 10px #ff0004, 0 0 20px #ff0000 inset;
+}
+
+h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+main {
+    flex: 1;
+}
+
+.skills-section,
+.certification-section,
+.Projects-section,
+.publications-section {
+    transition: all 0.3s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 20px;
+}

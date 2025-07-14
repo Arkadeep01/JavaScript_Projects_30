@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Resume Builder</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQWy6tz6eZ3A6Fe+D1zFT3Ihhoq+nUcRrs+Kek+yS8V4y6" crossorigin="anonymous">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="bg-dark text-center text-white py-2">
+        <h1>
+            Resume Generator
+        </h1>
+    </header>
+
+    <main class="flex-grow-1">
+        <!-- Theme Toggler Section -->
+        <section class="position-relative my-4 w-100">
+            <div class="theme-toggler d-none d-md-flex mt-3 mx-3">
+                <span class="material-symbols-sharp active">light_mode</span>
+                <span class="material-symbols-sharp">dark_mode</span>
+            </div>
+        </section>
+
+
+        <!-- Basic Information Section -->
+        <section class="basic-information px-3 py-4 border rounded">
+            <h3 class="mb-4">Basic Information</h3>
+            <!-- Add form or content here -->
+            <div class="row g-2">
+                <!-- Full Name -->
+                <div class="col-md-5">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <!-- Professional Details -->
+                <div class="col-md-5">
+                    <label for="headline" class="form-label">Professional Title</label>
+                    <input type="text" class="form-control" id="headline"
+                        placeholder="Enter a Title that can best describe you">
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="col-12">
+                    <fieldset class="contact-info px-3 ps-4 py-4 border rounded mt-4">
+                        <legend class="py-0 px-2 mb-0">Contact Info</legend>
+                        <div class="row gx-4 gy-3">
+                            <!-- Phone Number -->
+                            <div class="col-md-6">
+                                <label for="tele" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="tele" placeholder="Enter valid number">
+                            </div>
+
+                            <!-- LinkedIn Profile -->
+                            <div class="col-md-6">
+                                <label for="profileUrl" class="form-label">LinkedIn Profile</label>
+                                <input type="url" class="form-control" id="profileUrl"
+                                    placeholder="Paste your LinkedIn Profile URL">
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="col-md-6 mt-2">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+
+                            <!-- GitHub / Website -->
+                            <div class="col-md-6 mt-2">
+                                <label for="GithubUrl" class="form-label">GitHub / Website</label>
+                                <input type="url" class="form-control" id="GithubUrl"
+                                    placeholder="Enter GitHub or portfolio URL">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Education -->
+        <section class="education px-3 py-4 border rounded mt-4">
+            <h4 class="mb-3">Education</h4>
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <label for="degree" class="form-label">Degree / Program</label>
+                    <input type="text" id="degree" class="form-control"
+                        placeholder="e.g. B.Tech in Computer Science"></input>
+                </div>
+                <div class="col-md-6">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" id="location" class="form-control" placeholder="e.g. New Delhi, India"></input>
+                </div>
+            </div>
+            <div class="row g-2 mt-2">
+                <div class="col-md-6">
+                    <label for="institution" class="form-label">Name of Institution</label>
+                    <input type="text" id="institution" class="form-control" placeholder="e.g. IIT Delhi">
+                </div>
+                <div class="col-md-6">
+                    <label for="duration" class="form-label">Duration</label>
+                    <input type="text" id="duration" class="form-control" placeholder="e.g. 2017-2021">
+                </div>
+            </div>
+            <div class="row g-2 mt-2">
+                <!-- Highlights -->
+                <div class="col-md-6">
+                    <label for="eduHighlights1" class="form-label">GPA / Highlights (Optional)</label>
+                    <input type="text" id="eduHighlights1" class="form-control"
+                        placeholder="e.g. CGPA: 9.2 / 10 or Dean's List (2022)">
+                </div>
+            </div>
+
+            <!-- Add Another Educational Details -->
+            <div class="text-end mt-3">
+                <button type="button" class="btn btn-outline-warning"><i class="fas fa-plus me-1"></i> Add Another
+                    Degree</button>
+            </div>
+        </section>
+
+
+        <!-- Languages -->
+        <section class="Languages px-4 py-4 border rounded mt-4">
+            <h5 class="mb-3 fs-4">Languages</h5>
+
+            <div id="languagesContainer">
+                <div class="row language-row g-3 mb-3">
+
+                    <!-- Language Input -->
+                    <div class="col-md-4">
+                        <label class="form-label">Language</label>
+                        <input type="text" class="form-control language-input" placeholder="e.g. English">
+                    </div>
+
+                    <!-- Proficiency Select -->
+                    <div class="col-md-4">
+                        <label class="form-label">Proficiency</label>
+                        <select class="form-select form-control proficiency-select py-2" style="height: 54%;">
+                            <option selected disabled>Select proficiency</option>
+                            <option value="5">Native / Bilingual</option>
+                            <option value="4">Fluent</option>
+                            <option value="3">Professional Working</option>
+                            <option value="2">Intermediate</option>
+                            <option value="1">Basic</option>
+                        </select>
+                    </div>
+
+                    <!-- Save Button (aligned at bottom using invisible label) -->
+                    <div class="col-md-3">
+                        <label class="form-label invisible">Save</label>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-outline-secondary text-white save-btn">
+                                <i class="fas fa-check-circle me-1"></i> Save
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Add Another Button -->
+            <div class="text-end mb-3">
+                <button type="button" class="btn btn-outline-info " onclick="addLanguageRow()">
+                    <i class="fas fa-plus me-1"></i> Add Another Language
+                </button>
+            </div>
+
+            <!-- Display Saved Languages -->
+            <div id="savedLanguages">
+                <h6 class="col-md-6">Saved Languages:</h6>
+                <ul class="list-group text-dark" id="languageList"></ul>
+            </div>
+        </section>
+
+
+        <!-- Professional Summary -->
+        <section class="professional-summary px-4 py-4 my-4 border rounded">
+            <h3 class="mb-3">Professional Summary</h3>
+            <div class="form-group">
+                <label for="summary" class="form-label">Write a short paragraph (2-4 lines) summarizing your:</label>
+                <ul class="mb-2 mx-5">
+                    <li>Years of experience</li>
+                    <li>Key strengths</li>
+                    <li>Industry expertise</li>
+                    <li>Career goals or achievements</li>
+                </ul>
+                <textarea class="form-control" id="summary" rows="5"
+                    placeholder="e.g., 3+ years of experience in frontend development with expertise in React and UI/UX design. Proven track record in delivering responsive and visually appealing web applications. Passionate about building scalable solutions and growing in tech leadership roles."></textarea>
+            </div>
+        </section>
+
+
+        <!-- Personal Description -->
+        <section class="skils px-4 py-4 my-4 border rounded">
+            <h4 class="mb-2">Tell us about yourself</h4>
+            <form>
+                <!-- Field of Work -->
+                <div class="mb-3">
+                    <label for="feild" class="form-label">which field best describes your backgroun?</label>
+                    <select name="selection" id="field" class="form-select">
+                        <option selected disabled>Choose one..</option>
+                        <option selected>Computer Science</option>
+                        <option>Business / Finance</option>
+                        <option>Design / Arts</option>
+                        <option>Education / Research</option>
+                        <option>Healthcare</option>
+                        <option>Law / Legal Studies</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+
+                <!-- Job Type -->
+                <div class="mb-3">
+                    <label class="form-label">What type of Job you are applying for?</label>
+                    <div class="row gx-3">
+                        <div class="col-md-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="jobType" id="internship"
+                                    value="Internship">
+                                <label for="internship" class="form-check-label">Internship</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="jobType" id="entry" value="Entry">
+                                <label for="entry" class="form-check-label">Entry-Level</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="jobType" id="experienced"
+                                    value="Experienced">
+                                <label for="experienced" class="form-check-label">Experienced</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" name="jobType" id="acadedmic"
+                                    value="Acadedmic">
+                                <label for="acadedmic" class="form-check-label">Academic / Research</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Optional Sections -->
+                <div class="mb-4">
+                    <label class="form-label">What would you like to include in your resume?</label>
+                    <div class="row gy-2 gx-3">
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="techSkills"
+                                    onchange="toggleSkillsSection(this)">
+                                <label class="form-check-label" for="techSkills">Technical Skills</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="certifications">
+                                <label class="form-check-label" for="certifications">Certifications</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="projects">
+                                <label class="form-check-label" for="projects">Projects</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="publications">
+                                <label class="form-check-label" for="publications">Publications</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div id="skillsSection" class="skills-section px-4 py-3 border rounded mt-3 d-none">
+                    <!-- Skills -->
+                    <h5 class="mb-2">Skills</h5>
+                    <div class="row gx-4 gy-3">
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Add a skill e.g. Python">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Add another skill e.g. Git">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Add another skill e.g. React">
+                        </div>
+                    </div>
+                    <!-- Soft Skills -->
+                    <h5 class="mt-2 mb-2">Soft Skills</h5>
+                    <div class="row gx-4 gy-3">
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Add a skill e.g. leadership">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control"
+                                placeholder="Add another skill e.g. Communication Skills">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control"
+                                placeholder="Add another skill e.g. Problem-Solving">
+                        </div>
+                    </div>
+                    <!-- Tools & Framework -->
+                    <h5 class="mt-2 mb-2">Tools & Framework</h5>
+                    <div class="row gx-4 gy-3">
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Add a skill e.g. Canva">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Add another skill e.g. Docker">
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Add another skill e.g. Tensorflow">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Section -->
+                <div id="certificationSection" class="certification-section px-3 py-3 border rounded d-none">
+                    <h4 class="mb-3">Certification</h4>
+                    <div class="row gx-4 gy-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Certification Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Issuing Organization">
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <input type="date" class="form-control" placeholder="Completetion Date">
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <input type="url" class="form-control" placeholder="Credential URL (Optional)">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Section -->
+                <div id="ProjectsSection" class="Projects-section px-3 py-3 border rounded d-none">
+                    <h4 class="mb-3">Projects</h4>
+                    <div class="row gx-4 gy-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Projects Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Tech Stack">
+                        </div>
+                        <div class="col-md-12 py-2">
+                            <textarea type="text" class="form-control "
+                                placeholder="Breif Description of the Project"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="url" class="form-control" placeholder="Github or Live Link">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publications Section -->
+                <div id="publicationsSection" class="publications-section px-4 py-3 border rounded mt-3 d-none">
+                    <h5 class="mb-3">Publications</h5>
+                    <div class="row gx-4 gy-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Title of the Publication">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Journal/Conference Name">
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <input type="date" class="form-control" placeholder="Date of Publication">
+                        </div>
+                        <div class="col-md-6 py-2">
+                            <input type="url" class="form-control" placeholder="DOI or Link to the Publication">
+                        </div>
+                        <div class="col-12 py-2">
+                            <textarea class="form-control" rows="3"
+                                placeholder="Brief Summary or Abstract (optional)"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-end mt-3">
+                    <button type="submit" class="btn btn-outline-light">
+                        Continue
+                    </button>
+                </div>
+            </form>
+        </section>
+
+
+        <!-- Work Experience -->
+        <section class="work px-4 py-4 my-4 border rounded">
+            <h4 class="mb-3">Work Experience</h4>
+
+            <!-- Single Job Entry -->
+            <div class="job-entry mb-4">
+                <div class="row gx-4 gy-3">
+                    <!-- Job Details -->
+                    <div class="col-md-3">
+                        <label for="jobTitle1" class="form-label">Job Title</label>
+                        <input type="text" id="jobTitle1" class="form-control" placeholder="e.g. Frontend Developer">
+                    </div>
+                    <!-- Company -->
+                    <div class="col-md-3">
+                        <label for="companyName1" class="form-label">Company Name</label>
+                        <input type="text" id="companyName1" class="form-control" placeholder="e.g. Google">
+                    </div>
+                    <!-- Loaction -->
+                    <div class="col-md-3">
+                        <label for="location1" class="form-label">Location (City, Country)</label>
+                        <input type="text" id="location1" class="form-control" placeholder="e.g. Hyderabad, India">
+                    </div>
+                    <!-- Duration -->
+                    <div class="col-md-3">
+                        <label for="duration1" class="form-label">Duration</label>
+                        <input type="text" id="duration1" class="form-control" placeholder="e.g. June 2023 - Present">
+                    </div>
+                </div>
+
+                <!-- Responsibilities / Achievements -->
+                <div class="mt-3 ">
+                    <label for="responsibilities1" class="form-label">Key Responsibilities & Achievements</label>
+                    <ul class="list-unstyled col-md-5">
+                        <li><input type="text" class="form-control mb-2"
+                                placeholder="e.g. Increased conversion rate by 35%"></li>
+                        <li><input type="text" class="form-control mb-2" placeholder="e.g. Lead a team of 5 developers">
+                        </li>
+                        <li><input type="text" class="form-control mb-2"
+                                placeholder="e.g. Reduced page load time by 2 seconds"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Adding Another Job Details -->
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-success"><i class="fas fa-plus me-1"></i> Add Another
+                    Job</button>
+            </div>
+        </section>
+
+
+        <!-- Volunteer / Extracurriculars Section -->
+        <section class="volunteer-section px-4 py-4 border rounded mt-4">
+            <h4 class="mb-3">Volunteer Work / Extracurricular Activities</h4>
+
+            <!-- Single Entry -->
+            <div class="volunteer-entry mb-4">
+                <div class="row gx-4 gy-3">
+                    <!-- Role -->
+                    <div class="col-md-6">
+                        <label for="volRole1" class="form-label">Role</label>
+                        <input type="text" id="volRole1" class="form-control" placeholder="e.g. Campus Ambassador">
+                    </div>
+                    <!-- Organization -->
+                    <div class="col-md-6">
+                        <label for="volOrg1" class="form-label">Organization</label>
+                        <input type="text" id="volOrg1" class="form-control"
+                            placeholder="e.g. Google Developer Student Club">
+                    </div>
+                    <!-- Dates -->
+                    <div class="col-md-3 mt-2">
+                        <label for="volDate1" class="form-label">Dates</label>
+                        <input type="text" id="volDate1" class="form-control" placeholder="e.g. Aug 2021 – May 2022">
+                    </div>
+                </div>
+                <!-- Activities / Impact -->
+                <div class="mt-3">
+                    <label for="volActivities1" class="form-label">Activities / Impact</label>
+                    <ul class="list-unstyled">
+                        <li><input type="text" class="form-control mb-2"
+                                placeholder="e.g. Organized 10+ tech workshops on campus"></li>
+                        <li><input type="text" class="form-control mb-2"
+                                placeholder="e.g. Raised awareness about open-source tools"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Add More Button -->
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-primary"><i class="fas fa-plus me-1"></i> Add Another
+                    Activity</button>
+            </div>
+        </section>
+
+
+        <!-- Awards & Recognitions Section -->
+        <section class="awards-section px-4 py-4 border rounded mt-4">
+            <h4 class="mb-3">Awards & Recognitions</h4>
+
+            <!-- Single Award Entry -->
+            <div class="award-entry mb-4">
+                <div class="row gx-4 gy-3">
+                    <!-- Award Title -->
+                    <div class="col-md-6">
+                        <label for="awardTitle1" class="form-label">Award Title</label>
+                        <input type="text" id="awardTitle1" class="form-control"
+                            placeholder="e.g. Best Innovator Award">
+                    </div>
+
+                    <!-- Issuer -->
+                    <div class="col-md-6">
+                        <label for="awardIssuer1" class="form-label">Issuer</label>
+                        <input type="text" id="awardIssuer1" class="form-control"
+                            placeholder="e.g. Google, Hackathon XYZ">
+                    </div>
+
+                    <!-- Year -->
+                    <div class="col-md-6">
+                        <label for="awardYear1" class="form-label">Year</label>
+                        <input type="text" id="awardYear1" class="form-control" placeholder="e.g. 2024">
+                    </div>
+
+                    <!-- Description (Optional) -->
+                    <div class="col-12">
+                        <label for="awardDesc1" class="form-label">Brief Description (optional)</label>
+                        <textarea id="awardDesc1" class="form-control" rows="3"
+                            placeholder="e.g. Awarded for developing an AI-powered assistant that served 1M+ users."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add More Button -->
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-info"><i class="fas fa-plus me-1"></i> Add Another
+                    Award</button>
+            </div>
+        </section>
+
+
+        <!-- Interests / Hobbies Section -->
+        <section class="interests-section px-4 py-4 border rounded mt-4">
+            <h4 class="mb-3">Interests / Hobbies</h4>
+
+            <div class="row gx-4 gy-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="e.g. Reading Non-fiction">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="e.g. Playing Chess">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="e.g. Blogging about Technology">
+                </div>
+            </div>
+
+            <!-- Add More Button -->
+            <div class="text-end mt-3">
+                <button type="button" class="btn btn-outline-primary"><i class="fas fa-plus me-1"></i> Add More
+                    Interests</button>
+            </div>
+        </section>
+
+
+        <!-- Job targeting Info -->
+        <section class="job-target px-4 py-4 border rounded mt-4">
+            <h4 class="mb-3">Job Preferences</h4>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="jobType" class="form-label">Type of Job</label>
+                    <input type="text" id="jobType" class="form-control"
+                        placeholder="e.g. Frontend Developer, Data Analyst">
+                </div>
+                <div class="col-md-4">
+                    <label for="targetIndusty" class="form-label">Type of Job</label>
+                    <input type="text" id="targetIndustry" class="form-control"
+                        placeholder="e.g. Tech, Finance, Cloud, etc.">
+                </div>
+                <div class="col-md-4">
+                    <label for="workMode" class="form-label">Preferred Work Mode</label>
+                    <select name="Work" id="workMode" class="form-control">
+                        <option select disabled>Choose One..</option>
+                        <option selected>Remote</option>
+                        <option>Hybrid</option>
+                        <option>On-Site</option>
+                        <option>Flexible</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Geographic Preference -->
+            <div class="row g-2 mt-3">
+                <div class="col-md-6">
+                    <label for="locationPref" class="form-label">Geographic Preference</label>
+                    <input type="text" id="locationPref" class="form-control"
+                        placeholder="e.g. India, Germany, USA, No preference">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Download & Share Option -->
+
+        <section class="d-flex justify-content-end mt-4 py-2 px-3">
+            <!-- Download Button -->
+            <button class="btn btn-outline-light" onclick="openModal('downloadModal')">
+                <i class="fas fa-download me-1"></i> Download
+            </button>
+
+            <!-- Share Button -->
+            <button class="btn btn-outline-light me-2" onclick="openModal('shareModal')">
+                <i class="fas fa-share-alt me-1"></i> Share
+            </button>
+        </section>
+
+        <!-- Download Modal -->
+        <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="downloadModalLabel">Preparing Your File</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div id="downloadLoader">
+                            <div class="spinner-border text-light mb-3" role="status"></div>
+                            <p>Getting your file ready...</p>
+                        </div>
+                        <div id="downloadOptions" class="d-none">
+                            <p>Select a format:</p>
+                            <button class="btn btn-outline-light mb-2 w-100" onclick="downloadResume('pdf')">Download as
+                                PDF</button>
+                            <button class="btn btn-outline-light mb-2 w-100" onclick="downloadResume('doc')">Download as
+                                DOCX</button>
+                            <button class="btn btn-outline-light w-100" onclick="downloadResume('txt')">Download as
+                                TXT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Modal -->
+        <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="shareModalLabel">Preparing Share Options</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div id="shareLoader">
+                            <div class="spinner-grow text-light mb-3" role="status"></div>
+                            <p>Fetching your sharing options...</p>
+                        </div>
+                        <div id="shareOptions" class="d-none">
+                            <button class="btn btn-outline-light mb-2 w-100" onclick="shareVia('email')"><i
+                                    class="fas fa-envelope me-2"></i>Share via Email</button>
+                            <button class="btn btn-outline-light mb-2 w-100" onclick="shareVia('linkedin')"><i
+                                    class="fab fa-linkedin me-2"></i>Share on LinkedIn</button>
+                            <button class="btn btn-outline-light mb-2 w-100" onclick="shareVia('whatsapp')"><i
+                                    class="fab fa-whatsapp me-2"></i>Share on WhatsApp</button>
+                            <button class="btn btn-outline-light w-100" onclick="shareVia('copy')"><i
+                                    class="fas fa-link me-2"></i>Copy Shareable Link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <small>
+            Resume Builder &copy; | Build Your Resume Faster | Designed by Vexel
+        </small>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
