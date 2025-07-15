@@ -1,0 +1,60 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.2rem rgba(63, 63, 63, 0.1);
+}
+
+.card img {
+    width: 60px;
+    margin: 1rem auto 0;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.container.text-center h1 {
+    font-size: 3rem;
+}
+
+/* Button Enhancements */
+.btn-primary {
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff960b;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .container.text-center h1 {
+        font-size: 2rem;
+    }
+    .card img {
+        width: 40px;
+    }
+}
