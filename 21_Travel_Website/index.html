@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tourly</title>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQWy6tz6eZ3A6Fe+D1zFT3Ihhoq+nUcRrs+Kek+yS8V4y6" crossorigin="anonymous">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/788fc8cac3.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="bg-dark">
+    <header class="w-100 mb-5">
+        <!-- Header Top -->
+        <div class="header-top bg-transparent text-white px-5">
+            <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+
+                <a href="#" class="d-inline-block align-items-center me-auto">
+                    <img src="images/logo.svg" alt="Tourly Logo" style="height: 40px;">
+                </a>
+
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Search Form -->
+                    <form class="d-none d-md-flex align-items-center" role="search">
+                        <input class="form-control form-control-md me-2" type="search" placeholder="Search..."
+                            aria-label="Search">
+                        <button class="btn btn-outline-light btn-sm" type="submit">
+                            <span class="material-symbols-sharp">search</span>
+                        </button>
+                    </form>
+
+                    <button class="navbar-toggler d-lg-none border rounded" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="material-symbols-sharp">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Bottom -->
+        <div class="header-bottom bg-transparent px-1 py-1">
+            <nav class="navbar navbar-expand-lg navbar-light p-0" data-navbar>
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div
+                        class="container-fluid d-flex align-items-center justify-content-between flex-lg-row flex-column w-100">
+
+                        <!-- X Mark (Left, visible only on small screens) -->
+                        <div class="order-lg-0" style="width: 50px;">
+                            <button class="nav-close-btn btn btn-outline-secondary btn-sm d-lg-none"
+                                aria-label="Close Menu" data-nav-open-btn>
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <!-- Nav Links (Center) -->
+                        <div class="nav-bar-central order-lg-1 text-center text-lg-start">
+                            <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-lg-row gap-2">
+                                <li class="nav-item"><a class="nav-link text-dark" href="#home" data-nav-link>Home</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="#aboutUs" data-nav-link>About
+                                        Us</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="#destination"
+                                        data-nav-link>Destination</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="#packages"
+                                        data-nav-link>Packages</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="#gallery"
+                                        data-nav-link>Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="#contactUs"
+                                        data-nav-link>Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Book Now Button (Right) -->
+                        <div class="order-lg-2">
+                            <a href="#booking"
+                                class="btn btn-secondary mt-3 mt-lg-0 ms-2 ms-lg-3 px-4 py-2 border rounded">Book
+                                Now</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="flex-1">
+        <!-- Home Section -->
+        <section class="travel-container mt-5" id="home">
+            <h1 class="px-5 mx-3">Time to Travel </h1>
+
+            <p class="px-5 mx-3 text-white fw-bold">
+                The best time to visit Portofino and its surrounding natural beauty is from May to September, when the
+                <br>
+                weather is warm and ideal for exploring. During these months, hiking trails in Portofino National Park
+                are <br>
+                fully accessible, and the vibrant harbor atmosphere is at its peak. Portofino, a charming fishing
+                village <br>
+                on the Italian Riviera, captivates visitors with its colorful buildings, scenic coastline, and clear
+                <br>
+                waters—making it a favorite for both tourists and the yachting community.
+            </p>
+
+            <div class="px-5 mx-3 btn-grp">
+                <button class="btn btn-primary">Learn More</button>
+                <button class="btn btn-secondary mx-2">Book Now</button>
+            </div>
+        </section>
+
+        <!-- Search Tour -->
+        <section class="mt-5 px-5">
+            <form class="tour-container p-4 rounded shadow-sm ">
+                <div class="row g-3 align-items-center justify-content-center">
+
+                    <!-- Search Destination -->
+                    <div class="col-12 col-md-2">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input type="text" id="destination" class="form-control" required
+                            placeholder="Enter Destination...">
+                    </div>
+
+                    <!-- Pax Number -->
+                    <div class="col-12 col-md-2">
+                        <label for="pax" class="form-label">Pax Number</label>
+                        <input type="number" id="pax" class="form-control" required placeholder="No. of People...">
+                    </div>
+
+                    <!-- Check In -->
+                    <div class="col-12 col-md-2">
+                        <label for="checkIn" class="form-label">Check In</label>
+                        <input type="date" id="checkIn" class="form-control" required>
+                    </div>
+
+                    <!-- Check Out -->
+                    <div class="col-12 col-md-2">
+                        <label for="checkOut" class="form-label">Check Out</label>
+                        <input type="date" id="checkOut" class="form-control" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12 col-md-2 d-grid px-5 mx-5 mt-md-4 mt-3">
+                        <button type="submit" class="btn btn-primary">Inquire Now</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Popular -->
+        <section class="popular py-5 bg-light" id="destination">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <p class="section-subtitle text-dark fw-semibold">Uncover Place</p>
+                    <h2 class="h2 section-title text-info">Popular destination</h2>
+                    <p class="section-text text-muted">
+                        Explore the most loved travel spots across Italy, known for their natural beauty,
+                        cultural charm, and unforgettable experiences. Each destination offers something unique—whether
+                        it's picturesque villages, coastal getaways, or mountain retreats.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card popular-card h-100 shadow-sm border-0">
+                            <img src="images/popular-1.jpg" class="card-img-top" alt="San Miguel, Italy">
+                            <div class="card-body">
+                                <div class="d-flex text-warning mb-2">
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                </div>
+                                <p class="card-subtitle text-muted mb-1">Italy</p>
+                                <h5 class="card-title text-info">San Miguel</h5>
+                                <p class="card-text text-secondary">
+                                    A hidden gem in the heart of Italy, San Miguel offers coastal serenity, vibrant
+                                    alleys, and unforgettable cultural moments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card popular-card h-100 shadow-sm border-0">
+                            <img src="images/popular-2.jpg" class="card-img-top" alt="Burj Khalifa, Dubai">
+                            <div class="card-body">
+                                <div class="d-flex text-warning mb-2">
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                </div>
+                                <p class="card-subtitle text-muted mb-1">Dubai</p>
+                                <h5 class="card-title text-info">Burj Khalifa</h5>
+                                <p class="card-text text-secondary">
+                                    Soaring above the city skyline, the Burj Khalifa is a symbol of modern ambition and
+                                    luxury in the heart of Dubai.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card popular-card h-100 shadow-sm border-0">
+                            <img src="images/popular-3.jpg" class="card-img-top" alt="Kyoto Temple, Japan">
+                            <div class="card-body">
+                                <div class="d-flex text-warning mb-2">
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                    <span class="material-symbols-outlined">star_rate</span>
+                                </div>
+                                <p class="card-subtitle text-muted mb-1">Japan</p>
+                                <h5 class="card-title text-info">Kyoto Temple</h5>
+                                <p class="card-text text-secondary">
+                                    Step into Japan's past with Kyoto's ancient temples, peaceful gardens, and timeless
+                                    traditions nestled in scenic beauty.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages -->
+        <section class="package py-5 px-4" id="packages">
+            <div class="package-container text-dark">
+                <div class="text-center mb-5">
+                    <p class="text-white fw-semibold">Top Travel Packages</p>
+                    <h2 class="fw-bold text-warning">Explore Our Curated Getaways</h2>
+                    <p class="text-light">
+                        Choose from exclusive travel experiences designed to relax, inspire, and captivate—whether
+                        you're dreaming of the coast, riverside adventures, or island escapes.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0 package-card">
+                            <img src="images/package-1.jpg" class="card-img-top" alt="Beach Holiday">
+                            <div class="card-body">
+                                <h5 class="card-title">Experience The Great Holiday On Beach</h5>
+                                <p class="card-text">
+                                    Relax on pristine shores, soak in golden sunsets, and rejuvenate with tranquil waves
+                                    at our top beach destinations.
+                                </p>
+
+                                <ul class="list-unstyled d-flex flex-wrap gap-3 mb-3 card-meta-list">
+                                    <li class="d-flex align-items-center gap-1">
+                                        <span class="material-symbols-outlined px-2">clock_loader_20</span>
+                                        <span class="text">7D/6N</span>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2 gap-1">
+                                        <span class="material-symbols-outlined px-2">people_outline</span>
+                                        <span class="text">Pax: 10</span>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2 gap-1">
+                                        <span class="material-symbols-outlined px-2">location_on</span>
+                                        <span class="text">Malaysia</span>
+                                    </li>
+                                </ul>
+
+                                <div class="d-flex justify-content-between align-items-center mx-3">
+                                    <div>
+                                        <p class="small text-muted mb-1">(25 reviews)</p>
+                                        <div class="text-warning d-flex gap-1">
+                                            <span class="material-symbols-outlined">star_rate</span><span
+                                                class="material-symbols-outlined">star_rate</span>
+                                            <span class="material-symbols-outlined">star_rate</span><span
+                                                class="material-symbols-outlined">star_rate</span>
+                                            <span class="material-symbols-outlined">star_rate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                        <p class="fw-bold mb-1"><i class="fa-solid fa-indian-rupee-sign"></i> 62,500
+                                            <span class="text-muted fs-sm">/ per person</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary mt-3">Inquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4 ">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="images/package-2.jpg" class="card-img-top" alt="Oxolotan River Tour">
+                            <div class="card-body">
+                                <h5 class="card-title">Summer Holiday To The Oxolotan River</h5>
+                                <p class="card-text">
+                                    Cruise through lush greenery and discover hidden wonders along the scenic Oxolotan
+                                    River this summer.
+                                </p>
+                                <ul class="list-unstyled d-flex flex-wrap gap-3 mb-3 card-meta-list">
+                                    <li class="d-flex align-items-center gap-1">
+                                        <span class="material-symbols-outlined px-2">clock_loader_20</span>
+                                        <span class="text">7D/6N</span>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2 gap-1">
+                                        <span class="material-symbols-outlined px-2">people_outline</span>
+                                        <span class="text">Pax: 10</span>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2 gap-1">
+                                        <span class="material-symbols-outlined px-2">location_on</span>
+                                        <span class="text">Malaysia</span>
+                                    </li>
+                                </ul>
+
+                                <div class="d-flex justify-content-between align-items-center mx-3">
+                                    <div>
+                                        <p class="small text-muted mb-1">(20 reviews)</p>
+                                        <div class="text-warning d-flex gap-1">
+                                            <span class="material-symbols-outlined">star_rate</span><span
+                                                class="material-symbols-outlined">star_rate</span>
+                                            <span class="material-symbols-outlined">star_rate</span><span
+                                                class="material-symbols-outlined">star_rate</span>
+                                            <span class="material-symbols-outlined">star_rate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                        <p class="fw-bold mb-1"><i class="fa-solid fa-indian-rupee-sign"></i> 43,300
+                                            <span class="text-muted fs-sm">/ per person</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary mt-3">Inquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="images/package-3.jpg" class="card-img-top" alt="Santorini Island Vacation">
+                            <div class="card-body">
+                                <h5 class="card-title">Santorini Island's Weekend Vacation</h5>
+                                <p class="card-text">
+                                    Escape to Santorini's whitewashed cliffs and azure seas for a weekend filled with
+                                    charm and unforgettable views.
+                                </p>
+                                <ul class="list-unstyled d-flex flex-wrap gap-3 mb-3 card-meta-list">
+                                    <li class="d-flex align-items-center gap-1">
+                                        <span class="material-symbols-outlined px-2">clock_loader_20</span>
+                                        <span class="text">7D/6N</span>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2 gap-1">
+                                        <span class="material-symbols-outlined px-2">people_outline</span>
+                                        <span class="text">Pax: 10</span>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2 gap-1">
+                                        <span class="material-symbols-outlined px-2">location_on</span>
+                                        <span class="text">Malaysia</span>
+                                    </li>
+                                </ul>
+
+                                <div class="d-flex justify-content-between align-items-center mx-3">
+                                    <div>
+                                        <p class="small text-muted mb-1">(40 reviews)</p>
+                                        <div class="text-warning d-flex gap-1">
+                                            <span class="material-symbols-outlined">star_rate</span><span
+                                                class="material-symbols-outlined">star_rate</span>
+                                            <span class="material-symbols-outlined">star_rate</span><span
+                                                class="material-symbols-outlined">star_rate</span>
+                                            <span class="material-symbols-outlined">star_rate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+                                        <p class="fw-bold mb-1"><i class="fa-solid fa-indian-rupee-sign"></i>
+                                            54,900<span class="text-muted fs-sm">/ per person</span></p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary mt-3">Inquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery py-5" id="gallery">
+            <div class="container">
+                <div class="gallery-text text-center mb-5">
+                    <p class="section-subtitle text-uppercase text-white mb-2">Photo Gallery</p>
+
+                    <h2 class="h2 section-title text-warning fw-bold">Photos from Travellers</h2>
+
+                    <p class="mx-auto" style="max-width: 700px;">
+                        Discover breathtaking moments captured by fellow travelers during their unforgettable journeys.
+                        From scenic landscapes to vibrant city streets, these photos offer a glimpse into the beauty,
+                        culture, and adventure that await you around the world.
+                    </p>
+                </div>
+
+                <ul class="row list-unstyled">
+                    <!-- Left Grid with 4 Images -->
+                    <li class="col-lg-8">
+                        <ul class="row list-unstyled g-3">
+                            <li class="col-6">
+                                <img src="images/gallery-1.jpg" class="img-fluid rounded" alt="Traveller 1">
+                            </li>
+                            <li class="col-6">
+                                <img src="images/gallery-2.jpg" class="img-fluid rounded" alt="Traveller 2">
+                            </li>
+                            <li class="col-6">
+                                <img src="images/gallery-4.jpg" class="img-fluid rounded" alt="Traveller 3">
+                            </li>
+                            <li class="col-6">
+                                <img src="images/gallery-5.jpg" class="img-fluid rounded" alt="Traveller 4">
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Right Single Image -->
+                    <li class="col-xl-custom">
+                        <img src="images/gallery-3.jpg" class="img-fluid h-70 rounded object-fit-cover"
+                            alt="Feature Traveller">
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta py-5 bg-light text-center" id="contact">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <div class="cta-content mb-4">
+                            <p class="section-subtitle text-primary fs-5 fw-semibold">Call To Action</p>
+
+                            <h2 class="h2 section-title mb-3 fw-bold">Ready For Unforgettable Travel. Remember Us!</h2>
+
+                            <p class="section-text text-muted fs-6">
+                                Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum.
+                                Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
+                            </p>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg px-4 shadow">Contact Us!</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-warning text-center text-light py-4">
+        <ul class="list-inline mb-3">
+            <li class="list-inline-item mx-2">
+                <a href="#" class="text-primary fs-4">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+            </li>
+            <li class="list-inline-item mx-2">
+                <a href="#" class="text-info fs-4">
+                    <i class="fa-brands fa-twitter fa-2x"></i>
+                </a>
+            </li>
+            <li class="list-inline-item mx-2">
+                <a href="#" class="text-danger fs-4">
+                    <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+
+        <p class="mb-0 text-white fw-bold">Designed by <span class="text-dark fw-bold">Vexel</span> © 2025</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
