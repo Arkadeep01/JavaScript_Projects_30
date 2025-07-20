@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>NewsXReader</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/788fc8cac3.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="bg-transparent text-dark py-4 border-bottom">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="fw-bold text-danger" style="font-family: 'Times New Roman', 'Brush Script MT', cursive;">
+                    NewsXReader
+                </h3>
+
+                <!-- Navigation Menu -->
+                <ul class="list-inline m-0 d-flex gap-4 align-items-center border-start ps-4">
+                    <li class="list-inline-item"><a href="#bulletin-story"
+                            class="text-decoration-none text-dark fw-medium">Stories</a></li>
+                    <li class="list-inline-item"><a href="#top-creators"
+                            class="text-decoration-none text-dark fw-medium">Creator</a></li>
+                    <li class="list-inline-item"><a href="#News-Community"
+                            class="text-decoration-none text-dark fw-medium">Community</a></li>
+                    <li class="list-inline-item"><a href="#subscribe"
+                            class="text-decoration-none text-dark fw-medium">Subscribe</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span class="fw-medium px-2">Write</span>
+                    </div>
+                    <i class="fa-solid fa-bell px-2"></i>
+                    <img src="images/admin.jpeg" alt="admin" class="rounded-circle" width="35" height="35">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- Aside Section -->
+    <aside class="sidebar bg-dark text-white d-flex flex-column align-items-center py-4 position-fixed"
+        style="width: 80px; height: 100vh;">
+
+        <!-- Toggle (Top) -->
+        <div class="mb-4">
+            <i class="fa-solid fa-bars fs-4"></i>
+        </div>
+
+        <!-- Menu Items -->
+        <nav class="nav flex-column text-center w-100">
+            <a href="#" class="nav-link text-white py-3">
+                <i class="fa-solid fa-star fs-5"></i><br>
+                <small>Featured</small>
+            </a>
+            <a href="#" class="nav-link text-white py-3">
+                <i class="fa-solid fa-circle-play fs-5"></i><br>
+                <small>Media</small>
+            </a>
+            <a href="#" class="nav-link text-white py-3">
+                <i class="fa-solid fa-newspaper fs-5"></i><br>
+                <small>Articles</small>
+            </a>
+            <a href="#" class="nav-link text-white py-3">
+                <i class="fa-solid fa-filter fs-5"></i><br>
+                <small>Filter</small>
+            </a>
+            <a href="#" class="nav-link text-white py-3">
+                <i class="fa-solid fa-tv fs-5"></i><br>
+                <small>Live</small>
+            </a>
+        </nav>
+
+    </aside>
+
+
+
+
+
+    <!-- Main Body -->
+    <main class="ms-5 ps-5 py-3">
+
+        <!-- Headline -->
+        <section class="headline" style="margin-left: 60px; margin-right: 60px;">
+            <div id="headlineCarousel" class="carousel slide headline-carousel" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#headlineCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#headlineCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#headlineCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#headlineCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#headlineCarousel" data-bs-slide-to="4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <!-- Headline 1 -->
+                    <div class="carousel-item active headline-item">
+                        <img src="images/headline-1.jpg" class="d-block" alt="Headline Image 1">
+                        <div class="headline-caption">
+                            <h2>John Wick Returns with Vengeance</h2>
+                            <div class="news-date">Published: July 19, 2025</div>
+                            <p>Keanu Reeves is back in action with the latest installment of John Wick. The epic
+                                continues beneath the
+                                Eiffel Tower.</p>
+                        </div>
+                    </div>
+
+                    <!-- Headline 2 -->
+                    <div class="carousel-item headline-item">
+                        <img src="images/headline2.jpg" class="d-block" alt="Girl using VR headset">
+                        <div class="headline-caption">
+                            <h2>What Football Teaches Us About Resilience in Crisis</h2>
+                            <div class="news-date">Published: July 20, 2025</div>
+                            <p>Just like on the field, surviving a pandemic requires strategy, teamwork, and the ability
+                                to adapt under
+                                pressure. Football shows us how preparation, unity, and mental toughness can help
+                                communities bounce back
+                                stronger from unexpected challenges.</p>
+                        </div>
+                    </div>
+
+                    <!-- Headline 3 -->
+                    <div class="carousel-item headline-item">
+                        <img src="images/headline3.jpg" class="d-block" alt="Electric car team">
+                        <div class="headline-caption">
+                            <h2>Revolutionizing the Education System with VR</h2>
+                            <div class="news-date">Published: July 20, 2025</div>
+                            <p>Virtual Reality is transforming traditional classrooms by offering immersive, hands-on
+                                learning experiences
+                                that engage and inspire students like never before.</p>
+                        </div>
+                    </div>
+
+                    <!-- Headline 4 -->
+                    <div class="carousel-item headline-item">
+                        <img src="images/headline4.jpg" class="d-block" alt="Cricketer batting">
+                        <div class="headline-caption">
+                            <h2>Lucid Air Shatters Expectations with Record-Breaking Range</h2>
+                            <div class="news-date">Published: July 20, 2025</div>
+                            <p>Lucid's all-electric luxury sedan has officially outperformed its EPA range estimate,
+                                setting a new Guinness
+                                World Record. This milestone highlights the rapid evolution of EV technology and
+                                redefines what’s possible in
+                                sustainable high-performance travel.</p>
+                        </div>
+                    </div>
+
+                    <!-- Headline 5 -->
+                    <div class="carousel-item headline-item">
+                        <img src="images/headline5.jpg" class="d-block" alt="Woman in blue on stage">
+                        <div class="headline-caption">
+                            <h2>How Sports Translation Is Bridging Global Fan Communities</h2>
+                            <div class="news-date">Published: July 20, 2025</div>
+                            <p>From locker room interviews to live match commentaries, sports translation is breaking
+                                language barriers and
+                                turning local games into global phenomena. As sports brands expand, multilingual
+                                communication is becoming key
+                                to international fan engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#headlineCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-icon">
+                        <i class="fa-solid fa-angles-left fa-2x text-white"></i>
+                    </span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#headlineCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-icon">
+                        <i class="fa-solid fa-angles-right fa-2x text-white"></i>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Latest News -->
+        <section class="latest mt-4" aria-label="latest news">
+            <div class="container">
+                <h3 class="section-subtitle text-dark mb-4">
+                    Latest <strong class="strong">News</strong>
+                </h3>
+
+                <div class="scrolling-wrapper d-flex gap-3 overflow-auto pb-2">
+                    <div class="blog-card border rounded shadow-sm flex-shrink-0" style="width: 300px;">
+                        <figure class="card-banner img-holder mb-0">
+                            <img src="images/news1.jpg" loading="lazy" class="img-cover w-100 rounded-top"
+                                alt="News Image">
+                        </figure>
+                        <div class="card-content p-3">
+                            <div class="news-channel d-flex align-items-center mb-2 gap-2">
+                                <img src="images/news-channel1.jpg" alt="BBC News" class="channel-logo rounded-circle"
+                                    width="40" height="40">
+                                <div>
+                                    <p class="mb-0 fw-semibold text-secondary">BBC News</p>
+                                    <small class="text-muted">20 hours ago</small>
+                                </div>
+                            </div>
+                            <h3 class="h5 mb-2">
+                                <a href="#" class="card-title text-decoration-none text-dark">
+                                    "New technology is not good or evil in and of itself"
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">
+                                Former U.S. Secretary of State Hillary Clinton reflects on the ethical challenges of
+                                emerging technologies during a
+                                keynote address.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="blog-card border rounded shadow-sm flex-shrink-0" style="width: 300px;">
+                        <figure class="card-banner img-holder mb-0">
+                            <img src="images/news2.jpg" loading="lazy" class="img-cover w-100 rounded-top"
+                                alt="News Image">
+                        </figure>
+                        <div class="card-content p-3">
+                            <div class="news-channel d-flex align-items-center mb-2 gap-2">
+                                <img src="images/news-channel2.jpg" alt="BBC News" class="channel-logo rounded-circle"
+                                    width="40" height="40">
+                                <div>
+                                    <p class="mb-0 fw-semibold text-secondary">ESPN</p>
+                                    <small class="text-muted">1 day ago</small>
+                                </div>
+                            </div>
+                            <h3 class="h5 mb-2">
+                                <a href="#" class="card-title text-decoration-none text-dark">
+                                    QB #2 Shines Bright in Roos' Big Win
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">
+                                QB #2 leads the Roos to a stunning win with a breakout performance on the college
+                                football stage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="blog-card border rounded shadow-sm flex-shrink-0" style="width: 300px;">
+                        <figure class="card-banner img-holder mb-0">
+                            <img src="images/news3.jpg" loading="lazy" class="img-cover w-100 rounded-top"
+                                alt="News Image">
+                        </figure>
+                        <div class="card-content p-3">
+                            <div class="news-channel d-flex align-items-center mb-2 gap-2">
+                                <img src="images/news-channel3.jpg" alt="BBC News" class="channel-logo rounded-circle"
+                                    width="40" height="40">
+                                <div>
+                                    <p class="mb-0 fw-semibold text-secondary">BBC News</p>
+                                    <small class="text-muted">20 hours ago</small>
+                                </div>
+                            </div>
+                            <h3 class="h5 mb-2">
+                                <a href="#" class="card-title text-decoration-none text-dark">
+                                    "Hock Lewis Hamilton stat shows truth of 'disaster' Ferrari debut"
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">
+                                Despite a rocky start to his debut season with Ferrari, Lewis Hamilton has been
+                                remarkably consistent—scoring points
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="blog-card border rounded shadow-sm flex-shrink-0" style="width: 300px;">
+                        <figure class="card-banner img-holder mb-0">
+                            <img src="images/news4.jpg" loading="lazy" class="img-cover w-100 rounded-top"
+                                alt="News Image">
+                        </figure>
+                        <div class="card-content p-3">
+                            <div class="news-channel d-flex align-items-center mb-2 gap-2">
+                                <img src="images/news-channel4.jpg" alt="BBC News" class="channel-logo rounded-circle"
+                                    width="40" height="40">
+                                <div>
+                                    <p class="mb-0 fw-semibold text-secondary">IDN Times</p>
+                                    <small class="text-muted">16 hours ago</small>
+                                </div>
+                            </div>
+                            <h3 class="h5 mb-2">
+                                <a href="#" class="card-title text-decoration-none text-dark">
+                                    Democratic Party Secretary General: SBY's Health Is Improving After Treatment
+                                </a>
+                            </h3>
+                            <p class="card-text text-muted">
+                                Former President SBY is recovering well after recent medical care. He has resumed light
+                                activities as his condition steadily improves.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bulletin Story -->
+        <section id="bulletin-story" class="bulletin-story mt-3" style="margin-left: 60px; margin-right: 60px;" aria-label="bulletin story">
+            <div class="buletin-header text-dark">
+                <h3><strong class="strong">Buletin Story</strong></h2>
+                <a href="#" class="see-all text-danger">See all →</a>
+            </div>
+            <div class="story-container gap-5">
+                <div class="story">
+                    <img src="images/news-channel1.jpg"
+                        alt="bbcnews">
+                    <p>BBCNews</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel2.jpg" alt="ESPN">
+                    <p>ESPN</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel3.jpg" alt="formula_one">
+                    <p>Formula_One</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel4.jpg" alt="idntimes">
+                    <p>IDN Times</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel5.jpg" alt="apple">
+                    <p>apple</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel6.jpg" alt="samsung">
+                    <p>samsung</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel7.jpg" alt="kreyastudio">
+                    <p>kreyastudio</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel8.jpg" alt="fitra.eri">
+                    <p>fitra.eri</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel9.jpg" alt="hindustan times">
+                    <p>HT</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel10.jpg" alt="CNN">
+                    <p>CNN</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel11.jpg" alt="NVIDIA">
+                    <p>NVIDIA</p>
+                </div>
+                <div class="story">
+                    <img src="images/news-channel12.jpg" alt="RAG">
+                    <p>RAG</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block News -->
+        <section id="News-Community" class="news mt-4" style="margin: 0 60px;" aria-label="news story">
+            <div class="news-wrapper">
+                <div class="news-category text-dark">
+                    <h3><strong>Science News</strong><i class="fa-solid fa-arrow-right text-danger px-2"></i></h3>
+                    <div class="news-cards">
+                        <div class="card">
+                            <img src="images/science1.jpg" alt="science1">
+                            <div class="meta">SpaceX • 9 hours ago</div>
+                            <h3>SpaceX is enhancing Starship's upper stage with joint preloads,
+                                a nitrogen purge system, and improved propellant drains.</h3>
+                            <div class="tag-time"><span>Science</span> • 6 mins read</div>
+                        </div>
+                        <div class="card">
+                            <img src="images/science2.jpg" alt="science2">
+                            <div class="meta">MSN • 6 hours ago</div>
+                            <h3>Airtel and Jio plan satellite connectivity in India, enabling emergency comms in remote zones.
+                            </h3>
+                            <div class="tag-time"><span>Science</span> • 8 mins read</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="news-category text-dark">
+                    <h3><strong>Sports News</strong><i class="fa-solid fa-arrow-right text-danger px-2"></i></h3>
+                    <div class="news-cards">
+                        <div class="card">
+                            <img src="images/sports1.jpg" alt="Cricket">
+                            <div class="meta">Live • 5 hours ago</div>
+                            <h3>India vs England LIVE: Day 3 of 3rd Test - India take lead with fiery bowling at Lord’s.</h3>
+                            <div class="tag-time"><span>Sport</span> • 10 min read</span></div>
+                        </div>
+                        <div class="card">
+                            <img src="images/sports2.jpg" alt="Artistic swimmer">
+                            <div class="meta">July 19, 2025 • World Aquatics Championships</div>
+                            <h3>Grace and Power: Artistic swimmers dazzle in synchronized brilliance at Aquatics 2025.</h3>
+                            <div class="tag-time"><span>Sport</span> • 3 min read</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Creator -->
+        <section id="top-creators" class="top-creators mt-4" style="margin: 0 60px;" aria-label="news story">
+            <div class="Top-Creators text-dark">
+                <h3><strong class="strong">Top Creators</strong></h3>
+            </div>
+            <div class="creator-list text-dark">
+                <div class="creator">
+                    <img src="images/author-1.jpg" alt="Alexis Young">
+                    <p><strong>Alexis Young</strong><br><span>BBC News</span></p>
+                </div>
+                <div class="creator">
+                    <img src="images/author-2.jpg" alt="Emily Sallegar">
+                    <p><strong>Emily Sallegar</strong><br><span>CNN News</span></p>
+                </div>
+                <div class="creator">
+                    <img src="images/author-3.jpg" alt="Stuart Bradman">
+                    <p><strong>Stuart Bradman</strong><br><span>IDN News</span></p>
+                </div>
+                <div class="creator">
+                    <img src="images/author-4.jpg" alt="lara Karko">
+                    <p><strong>Lara Karkoski</strong><br><span>DW  News</span></p>
+                </div>
+                <div class="creator">
+                    <img src="images/author-5.jpg" alt="Alex Young">
+                    <p><strong>Joya Gatiya</strong><br><span>France 24 News</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription -->
+        <section id="subscribe" class="subscribe-section" style="margin-left: 60px;">
+            <div class="subscribe-box text-dark">
+                <h2 class="fw-bold mt-3">Subscribe to our Newsletter</h2>
+                <h4>Get the latest <span class="highlights text-danger fw-bold">News</span> delivered straight to your inbox.</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit btn btn-danger">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <!-- Brand Section -->
+                <div class="col-md-3 mb-4">
+                    <h2 class="fw-bold text-danger" style="font-family: 'Times New Roman', 'Brush Script MT', cursive;">
+                        NewsXReader</h2>
+                    <p>Craft narratives that ignite inspiration, knowledge, and entertainment.</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook text-light"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-twitter text-light"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-pinterest text-light"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#"><i class="fa-brands fa-vimeo text-light"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Top Links -->
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Business</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">Startup</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Employee</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Success</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Videos</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Markets</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Technology</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">Innovate</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Gadget</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Innovative Cities</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Upstarts</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Future Tech</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Travel</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">Destinations</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Food & Drink</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Stay</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">News</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Videos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Sports</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">Football</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Tennis</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Golf</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Esports</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">WaterPolo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer Links -->
+            <div class="row pt-1 align-items-end">
+                <div class="col-md-3 d-flex align-items-end">
+                    <p class="mb-0">&copy; 2025 NewsXReader | Created by Vexel</p>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Entertainment</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">Movies</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Artist</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Television</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Influencer</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Viral</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Features</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">As Equals</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Call to Earth</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Freedom Project</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Inside Asia</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">2 Degrees</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Weather</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">Climate</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Storm Tracker</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Wildlife Tracker</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Earthquake</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Videos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>More</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-light text-decoration-none">Design</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Membership</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Investment</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Work for NewsXReader</a></li>
+                                <li><a href="#" class="text-light text-decoration-none">Support Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
