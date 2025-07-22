@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Micro Podcast Website</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/788fc8cac3.js"crossorigin="anonymous"></script>
+
+    <!-- Google Font Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header class="active" data-header>
+        <div class="container">
+            <div class="overlay" data-overlay>
+
+            </div>    
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="Micro logo">
+            </a>
+
+            <!-- Menu Button -->
+            <button class="nav-toggle-btn" data-nav-toggle-btn>
+                <i class="icons fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Button -->
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#Home" class="navbar-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#Podcast" class="navbar-link">Podcast</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#Host" class="navbar-link">Host</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#Blog" class="navbar-link">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#Contact" class="navbar-link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-actions">
+                    <button class="navbar-btn"><i class="icons fa-solid fa-magnifying-glass"></i></button>
+                    <button class="navbar-btn"><i class="icons fa-solid fa-arrow-right-to-bracket"></i></button>
+                    <button class="navbar-btn"><i class="icons fa-solid fa-cart-shopping"></i></button>
+                    <button class="btn"><i class="icons fa-brands fa-paypal"></i><span>Donate</span></button>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <article class="container">
+            <!-- Home -->
+            <section class="home" id="Home">
+                <!-- Home Content -->
+                <div class="home-content">
+                    <img src="images/hero-title.png" alt="Podcast" class="home-title">
+                    
+                    <p class="home-text">
+                        🎙️ Welcome to <strong class="text-danger">MICRO</strong> - the place where voices spark ideas and stories come to life. Whether you're here to learn, laugh, or simply listen, our episodes bring you authentic conversations, expert insights, and fresh perspectives from guests across every field. Tune in weekly for content that inspires curiosity, challenges the norm, and keeps you coming back for more. Wherever you are on your journey, there's a voice here for you.
+                    </p>
+
+                    <div class="home-btn-group">
+                        <button class="btn btn-primary">
+                            <i class="icons fa-solid fa-headset"></i>
+                            <span>Listen Now</span>
+                        </button>
+
+                        <div class="btn-link-wrapper">
+                            <p class="btn-title">Subscribe On:</p>
+                            <a href="#" class="btn-link">
+                                <i class="icons fa-brands fa-apple"></i>
+                                <span>Apple Music</span>
+                            </a>
+                            
+                            <a href="#" class="btn-link">
+                                <i class="icons fa-brands fa-soundcloud"></i>
+                                <span>Sound Cloud</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banner -->
+                <div class="home-banner">
+
+                </div>
+            </section>
+
+            <!-- Podcast -->
+            <section class="podcast" id="podcast">
+                <!-- Podcast Cards -->
+                <ul class="podcast-list">
+                    <!-- Card-1 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-1.png" alt="Tube Preamps, TLM103 vs. OJ 818, Podcastage's Beanies">
+                
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2025-02-15">Feb 15, 2025</time>
+                                    <p class="pop-epi">Episodes: 01</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    Tube Preamps, TLM103 vs. OJ 818, Podcastage's Beanies
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <!-- Card-2 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-2.png" alt="Ask Unladylike: Late Bloomer with Forever 35">
+                
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2022-02-15">Feb 15, 2022</time>
+                                    <p class="pod-epi">Episodes: 02</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    Ask Unladylike: Late Bloomer with Forever 35
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <!-- Card-3 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-3.png" alt="How to Effectively Incentivize Team Members">
+
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2022-02-15">Feb 15, 2022</time>
+                                    <p class="pod-epi">Episodes: 03</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    How to Effectively Incentivize Team Members
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <!-- Card-4 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-4.png" alt="How to go from Start-Up to Scale-Up">
+                
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2022-02-15">Feb 15, 2022</time>
+                                    <p class="pod-epi">Episodes: 04</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    How to go from Start-Up to Scale-Up
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <!-- Card-5 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-5.png" alt="Deadbuttons - Tired of You | Live at Club Heavy">
+                
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2022-02-15">Feb 15, 2022</time>
+                                    <p class="pod-epi">Episodes: 05</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    Deadbuttons - Tired of You | Live at Club Heavy
+                                </h3>
+                            </div>
+                
+                        </a>
+                    </li>
+                
+                    <!-- Card-6 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-6.png" alt="Boogie Through the Universe with SOWO">
+                
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2022-02-15">Feb 15, 2022</time>
+                                    <p class="pod-epi">Episodes: 06</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    Boogie Through the Universe with SOWO
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <!-- Card-7 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-7.png" alt="Glittering Blackness, Fall - 4 | Live at Club Heavy">
+                
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2022-02-15">Feb 15, 2022</time>
+                                    <p class="pod-epi">Episodes: 07</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    Glittering Blackness, Fall - 4 | Live at Club Heavy
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <!-- Card-8 -->
+                    <li>
+                        <a href="#" class="podcast-card">
+                            <figure class="card-banner">
+                                <img src="images/podcast-8.png" alt="The Meditative Photos of Chaelinjane">
+                
+                                <div class="card-banner-icon">
+                                    <i class="icons fa-solid fa-play"></i>
+                                </div>
+                            </figure>
+                
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <time datetime="2022-02-15">Feb 15, 2022</time>
+                                    <p class="pod-epi">Episodes: 08</p>
+                                </div>
+                
+                                <h3 class="h3 card-title">
+                                    The Meditative Photos of Chaelinjane
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- NewsLetter -->
+            <section class="newsletter" id="Blog">
+                <div class="newsletter-card">
+                    <!-- News Card -->
+                    <div class="card-content">
+                        <h3 class="h3 card-title">
+                            Sign Up For Our Newsletter. It's Free!
+                        </h3>
+                        <p class="card-text">
+                            Welcome to our platform, where creativity meets purpose. Dive into a world of inspiring content, thoughtful design, and seamless experiences crafted just for you. Whether you're here to explore, learn, or connect — there's something for everyone in our growing community.
+                        </p>
+                    </div>
+
+                    <!-- News Form -->
+                    <form action="" class="card-form" data-form>
+                        <input type="email" name="email_address" placeholder="Your Email Address" required class="input-field" data-input>
+                        <button type="submit" class="btn btn-primary" disabled data-submit>Subscribe</button>
+                    </form>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="images/logo.svg" alt="Micro logo">
+                    </a>
+                    <p class="footer-text">
+                        Discover a space where ideas flourish and creativity thrives. Our content is designed to inform, inspire, and engage — offering thoughtful insights and meaningful experiences tailored to your interests. Whether you're exploring new perspectives or deepening your knowledge, you're in the right place.
+                    </p>
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-link-title">Start A Conversation</p>                    
+                    </li>
+                    <li>
+                        <a href="#hello@micro.com" class="footer-link">hello@micro.com</a>
+                    </li>
+                    <li>
+                        <a href="tel:+0123454678" class="footer-link">+01234 54678</a>
+                    </li>
+                    <li>
+                        <a href="tel:15780346789" class="footer-link">+1 (578) 034-6789</a>
+                    </li>
+                </ul>
+
+                <div class="social-list-box">
+                    <p class="social-title">Follow Us On:</p>
+
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <i class="icons fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <i class="icons fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <i class="icons fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <i class="icons fa-brands fa-soundcloud"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <i class="icons fa-brands fa-apple"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy; 2025 <a href="#" class="text-danger">VEXEL</a>. All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" class="go-top" data-go-top>
+        <i class="icons fa-solid fa-chevron-up"></i>
+    </a>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
