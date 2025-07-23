@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CineFlix</title>
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/788fc8cac3.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font Links -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Libertinus+Math&family=Libertinus+Mono&family=Raleway:ital,wght@0,100..900;1,100..90&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Menu-Bar -->
+            <button class="navbar-menu-btn">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Brand Logo -->
+            <a href="#" class="navbar-brand">
+                <img src="images/logo.png" alt="Brand Logo">
+            </a>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="navbar-nav">
+                    <li> <a href="#" class="navbar-link">Home</a> </li>
+                    <li> <a href="#Category" class="navbar-link">Category</a> </li>
+                    <li> <a href="#Live" class="navbar-link indicator">LIVE</a> </li>
+                </ul>
+            </nav>
+
+            <!-- Search and Sign-In -->
+            <div class="navbar-actions">
+                <form action="#" class="navbar-form">
+                    <input type="text" name="Search" id="Search" placeholder="I'm looking for.."
+                        class="navbar-form-search">
+
+                    <button class="navbar-form-btn">
+                        <i class="icons fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <button class="navbar-form-close">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </button>
+                </form>
+
+                <!-- Search Button for small screen -->
+                <div class="icons navbar-search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <a href="#" class="navbar-signin">
+                    <span>Sign In</span>
+                    <i class="icons fa-solid fa-sign-in"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- The banner -->
+        <section class="banner">
+            <div class="banner-card">
+                <img src="images/John-Wick-3.jpg" class="banner-img">
+
+                <div class="card-content">
+                    <div class="card-info">
+                        <div class="genre">
+                            <i class="icons fa-solid fa-film"></i>
+                            <span>Action/Thriller</span>
+                        </div>
+
+                        <div class="year">
+                            <i class="icons fa-solid fa-calendar-days"></i>
+                            <span>2019</span>
+                        </div>
+
+                        <div class="duration">
+                            <i class="icons fa-solid fa-clock"></i>
+                            <span>2h 11m</span>
+                        </div>
+
+                        <div class="quality">4k</div>
+                    </div>
+
+                    <h2 class="card-title">John Wick: Chapter 3 - parabellum</h2>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Movies Section -->
+        <section class="movies">
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-dropdowns">
+                    <!-- Genre -->
+                    <select name="genre" class="genre">
+                        <option value="all genres">All genres</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="animal">Animal</option>
+                        <option value="animation">Animation</option>
+                        <option value="biography">Biography</option>
+                    </select>
+
+                    <!-- Year -->
+                    <select name="year" class="year">
+                        <option value="all years">All the years</option>
+                        <option value="2022">2022</option>
+                        <option value="2020-2021">2020-2021</option>
+                        <option value="2010-2019">2010-2019</option>
+                        <option value="2000-2009">2000-2009</option>
+                    </select>
+                </div>
+
+                <div class="filter-radios">
+                    <input type="radio" name="filter" id="featured" checked>
+                    <label for="featured">Featured</label>
+
+                    <input type="radio" name="filter" id="popular">
+                    <label for="popular">Popular</label>
+
+                    <input type="radio" name="filter" id="newest">
+                    <label for="newest">Newest</label>
+
+                    <div class="checked-radio-bg"></div>
+                </div>
+            </div>
+
+            <!-- Movies Grid -->
+            <div class="movies-grid">
+                <!-- Card 1 -->
+                <div class="movies-card">
+                    <!-- Card Heading -->
+                    <div class="card-head">
+                        <img src="images/movies/red-notice.jpg" alt="" class="card-img">
+
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>6.4</span>
+                            </div>
+
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h3 class="card-title">Red Notice</h3>
+
+                        <div class="card-info">
+                            <span class="genre">Action/Comedy</span>
+                            <span class="year">2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="movies-card">
+                    <!-- Card Heading -->
+                    <div class="card-head">
+                        <img src="images/movies/spider-men.jpg" alt="" class="card-img">
+
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>7.4</span>
+                            </div>
+
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h3 class="card-title">Spider-Man: Homecoming</h3>
+
+                        <div class="card-info">
+                            <span class="genre">Action/Comedy</span>
+                            <span class="year">2017</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3-->
+                <div class="movies-card">
+                    <!-- Card Heading -->
+                    <div class="card-head">
+                        <img src="images/movies/matrix.jpg" alt="" class="card-img">
+
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>N/A</span>
+                            </div>
+
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h3 class="card-title">The Matrix Resurrections</h3>
+
+                        <div class="card-info">
+                            <span class="genre">Sci-fi/Action</span>
+                            <span class="year">2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4-->
+                <div class="movies-card">
+                    <!-- Card Heading -->
+                    <div class="card-head">
+                        <img src="images/movies/eternals.jpg" alt="" class="card-img">
+
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>6.8</span>
+                            </div>
+
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h3 class="card-title">Eternals</h3>
+
+                        <div class="card-info">
+                            <span class="genre">Adventure/Action</span>
+                            <span class="year">2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5-->
+                <div class="movies-card">
+                    <!-- Card Heading -->
+                    <div class="card-head">
+                        <img src="images/movies/dune.jpg" alt="" class="card-img">
+
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>8.2</span>
+                            </div>
+
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h3 class="card-title">Dune</h3>
+
+                        <div class="card-info">
+                            <span class="genre">Sci-fi/Adventure</span>
+                            <span class="year">2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6-->
+                <div class="movies-card">
+                    <!-- Card Heading -->
+                    <div class="card-head">
+                        <img src="images/movies/1917.jpg" alt="" class="card-img">
+
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>8.3</span>
+                            </div>
+
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h3 class="card-title">1917</h3>
+
+                        <div class="card-info">
+                            <span class="genre">War/Drama</span>
+                            <span class="year">2019</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/shang-chi.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>7.6</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Shang-Chi and The Legend of The Ten Rings</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Fantasy</span>
+                            <span class="year">2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/casino-royale.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>8.0</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Casino Royale</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Adventure</span>
+                            <span class="year">2006</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/dark-knight.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>9.0</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">The Dark Knight</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Adventure</span>
+                            <span class="year">2008</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/panther.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>7.3</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Black Panther</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Adventure</span>
+                            <span class="year">2018</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/venom.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>6.7</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Venom</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Adventure</span>
+                            <span class="year">2018</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/LOTR.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>8.9</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Lord Of The Rings: Return Of The King</h3>
+                        <div class="card-info">
+                            <span class="genre">Fantasy/Adventure</span>
+                            <span class="year">2003</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/interstaller.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>8.6</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Interstellar</h3>
+                        <div class="card-info">
+                            <span class="genre">Sci-fi/Adventure</span>
+                            <span class="year">2014</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/gladiator.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>8.5</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Gladiator</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Adventure</span>
+                            <span class="year">2000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 15 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/endgame.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>8.4</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Avengers: Endgame</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Sci-fi</span>
+                            <span class="year">2019</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 16 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/ww84.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>5.4</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Wonder Woman 1984</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Adventure</span>
+                            <span class="year">2020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 17 -->
+                <div class="movies-card">
+                    <div class="card-head">
+                        <img src="images/movies/captain-marvel.jpg" alt="" class="card-img">
+                        <div class="card-overlay">
+                            <div class="bookmark">
+                                <i class="icons fa-solid fa-bookmark"></i>
+                            </div>
+                            <div class="rating">
+                                <i class="icons fa-regular fa-star"></i>
+                                <span>6.8</span>
+                            </div>
+                            <div class="play">
+                                <i class="icons fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Captain Marvel</h3>
+                        <div class="card-info">
+                            <span class="genre">Action/Sci-fi</span>
+                            <span class="year">2019</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <button class="load-more">LOAD MORE</button>
+        </section>
+
+
+        <!-- Category Section -->
+        <section class="category" id="category">
+            <h2 class="section-heading">
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="images/action.jpg" alt="" class="card-img">
+                        <div class="name">Action</div>
+                        <div class="total">100</div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <img src="images/comedy.jpg" alt="" class="card-img">
+                        <div class="name">Comedy</div>
+                        <div class="total">50</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="images/thriller.webp" alt="" class="card-img">
+                        <div class="name">Thriller</div>
+                        <div class="total">20</div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <img src="images/horror.jpg" alt="" class="card-img">
+                        <div class="name">Horror</div>
+                        <div class="total">80</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="images/adventure.jpg" alt="" class="card-img">
+                        <div class="name">Adventure</div>
+                        <div class="total">100</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="images/animated.jpg" alt="" class="card-img">
+                        <div class="name">Animated</div>
+                        <div class="total">50</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="images/crime.jpg" alt="" class="card-img">
+                        <div class="name">Crime</div>
+                        <div class="total">20</div>
+                    </div>
+
+                    <div class="category-card">
+                        <img src="images/sci-fi.jpg" alt="" class="card-img">
+                        <div class="name">SCI-FI</div>
+                        <div class="total">80</div>
+                    </div>
+
+                </div>
+            </h2>
+        </section>
+
+
+        <!-- LIVE Section -->
+        <section class="live" id="live">
+            <h2 class="section-heading">Live TV Shows</h2>
+
+            <div class="category-grid">
+                <!-- Card 1 -->
+                <div class="live-card">
+                    <div class="card-head">
+                        <img src="images/planet.jpg" alt="" class="card-img">
+                        <div class="live-badge">LIVE</div>
+                        <div class="total-viewers">305k viewers</div>
+
+                        <div class="play">
+                            <i class="icons fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <img src="images/bbcamerica.jpg" alt="" class="avatar">
+                        <h3 class="card-title">Planet Earth II <br> Season 1 - Islands</h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="live-card">
+                    <div class="card-head">
+                        <img src="images/got.jpg" alt="" class="card-img">
+                        <div class="live-badge">LIVE</div>
+                        <div class="total-viewers">1.7M viewers</div>
+
+                        <div class="play">
+                            <i class="icons fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <img src="images/HBO-Logo-square.jpg" alt="" class="avatar">
+                        <h3 class="card-title">Game of Thrones <br> Season 5 - Mother's Mercy</h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="live-card">
+                    <div class="card-head">
+                        <img src="images/vikins.jpg" alt="" class="card-img">
+                        <div class="live-badge">LIVE</div>
+                        <div class="total-viewers">468K viewers</div>
+
+                        <div class="play">
+                            <i class="icons fa-solid fa-circle-play"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <img src="images/HBO-Logo-square.jpg" alt="" class="avatar">
+                        <h3 class="card-title">Vikings <br> Season 4 - What Might Have Been</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="" class="footer-logo">
+                <p class="slogan">Movies & TV Shows, Online cinema, Movie database HTML Template.</p>
+
+                <div class="social-link">
+                    <a href="#"><i class="icons fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="icons fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="icons fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="icons fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="icons fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <ul>
+                    <h4 class="link-heading">CineFlix</h4>
+
+                    <li class="link-item"><a href="#">About us</a></li>
+                    <li class="link-item"><a href="#">My profile</a></li>
+                    <li class="link-item"><a href="#">Pricing plans</a></li>
+                    <li class="link-item"><a href="#">Contacts</a></li>
+                </ul>
+
+                <ul>
+                    <h4 class="link-heading">Browse</h4>
+
+                    <li class="link-item"><a href="#">Live Tv</a></li>
+                    <li class="link-item"><a href="#">Live News</a></li>
+                    <li class="link-item"><a href="#">Live Sports</a></li>
+                    <li class="link-item"><a href="#">Streaming Library</a></li>
+                </ul>
+
+                <ul>
+                    <li class="link-item"><a href="#">TV Shows</a></li>
+                    <li class="link-item"><a href="#">Movies</a></li>
+                    <li class="link-item"><a href="#">Kids</a></li>
+                    <li class="link-item"><a href="#">Collections</a></li>
+                </ul>
+
+                <ul>
+                    <h4 class="link-heading">help</h4>
+
+                    <li class="link-item"><a href="#">Account & Billing</a></li>
+                    <li class="link-item"><a href="#">Plans & Pricing</a></li>
+                    <li class="link-item"><a href="#">Supported devices</a></li>
+                    <li class="link-item"><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="copyright">
+                <p>&copy; copyright 2021 CineFlix | Powered by VEXEL</p>
+            </div>
+            <div class="wrapper">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
